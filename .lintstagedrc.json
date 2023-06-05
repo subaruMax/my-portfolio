@@ -1,0 +1,10 @@
+{
+  "*.{ts,tsx}": [
+    "eslint --color --max-warnings 0 --no-ignore",
+    "tsc-files --p tsconfig.json --noEmit"
+  ],
+  "*.{js,jsx,ts,tsx,json,md,html}": ["prettier --write"],
+  "*.{css,scss}": ["stylelint --quiet --fix", "prettier --write"],
+  "*.js": "eslint --cache --fix",
+  "*.css": "stylelint --fix"
+}

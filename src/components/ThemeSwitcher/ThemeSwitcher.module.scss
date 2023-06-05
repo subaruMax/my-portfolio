@@ -1,0 +1,44 @@
+$border-radius: 30px;
+$button-height: 30px;
+
+.main {
+  width: 65px;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  position: relative;
+  height: calc($button-height + 4px);
+  user-select: none;
+  border-color: var(--color-primary-100);
+}
+
+.dark {
+  .switchButton {
+    transform: translate(1px, -50%);
+  }
+}
+
+.light {
+  .switchButton {
+    left: 100%;
+    transform: translate(calc(-100% - 1px), -50%);
+  }
+}
+
+.switchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
+  padding: 3px;
+  position: absolute;
+  top: 50%;
+  border: none;
+  left: 0;
+  transform: translate(0, -50%);
+  height: $button-height;
+  width: $button-height;
+  border: 1px solid var(--color-primary-100);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  background-color: var(--color-mixed-300);
+}

@@ -1,0 +1,63 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--light);
+  color: var(--accent1);
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--info);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[data-theme='dark'] {
+  --light: #12100f;
+  --dark: #2d2f2c;
+  --primary: #232d49;
+  --secondary: #5368a4;
+  --info: #4882bf;
+  --accent1: #afb9bb;
+  --accent2: #308856;
+  --accent3: #2f4e3e;
+  --success: #229f5f;
+  --warning: #e1ca23;
+  --danger: #ee1f12;
+}
+
+[data-theme='light'] {
+  --light: #d8d5d3;
+  --dark: #363d42;
+  --primary: #345066;
+  --secondary: #446a8e;
+  --info: #3b415f;
+  --accent1: #eb5638;
+  --accent2: #d35d39;
+  --accent3: #a4b32b;
+  --success: #14a45a;
+  --warning: #e5ca14;
+  --danger: #f40811;
+}
