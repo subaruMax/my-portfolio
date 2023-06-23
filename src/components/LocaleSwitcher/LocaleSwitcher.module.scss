@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  font-size: 12px;
+  text-transform: capitalize;
+  gap: 4px;
+}
+
+.option {
+  cursor: pointer;
+  word-spacing: 3px;
+  padding: 4px 8px;
+  border-right: 1px solid var(--border-color);
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--text-color);
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &.active {
+    background-color: var(--special-bg-color);
+    color: var(--special-text-color);
+  }
+}
