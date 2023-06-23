@@ -1,9 +1,6 @@
-import { MainLayout } from '@app/components/MainLayout';
+import { redirect } from 'next/navigation';
 
-import styles from './page.module.css';
-
-const Home = () => {
-  return <MainLayout>Hello World</MainLayout>;
-};
-
-export default Home;
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
+}

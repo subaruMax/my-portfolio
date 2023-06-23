@@ -1,9 +1,8 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import cn from 'classnames';
-import { useCookies } from 'react-cookie';
 
-import useMainContext from '@app/context/mainContext';
-import { THEME_COOKIE_NAME } from '@app/constants/cookies';
+import { SupportedThemes } from '@app/types/general';
+import useThemeContext from '@app/context/themeContext';
 
 import s from './ThemeSwitcher.module.scss';
 
@@ -12,25 +11,32 @@ export interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
-  const { lightTheme, toggleTheme } = useMainContext();
-  const [cookies, setCookie] = useCookies([THEME_COOKIE_NAME]);
+  const { theme, toggleTheme } = useThemeContext();
 
-  const handleToggleTheme = () => {
-    toggleTheme();
-    document.body.setAttribute('data-theme', !lightTheme ? 'light' : 'dark');
-    setCookie(THEME_COOKIE_NAME, !lightTheme, { path: '/', httpOnly: false });
+  const isLight = theme === SupportedThemes.light;
+  const isDark = theme === SupportedThemes.dark;
+
+  const handleChangeTheme = () => {
+    if (isLight) {
+      return toggleTheme(SupportedThemes.dark);
+    }
+
+    toggleTheme(SupportedThemes.light);
   };
 
   return (
-    <div
+    <button
       className={cn(s.main, className, {
-        [s.light]: lightTheme,
-        [s.dark]: !lightTheme
+        [s.light]: isLight,
+        [s.dark]: isDark,
+        [s.unset]: !theme
       })}
+      onClick={handleChangeTheme}
     >
-      <button className={s.switchButton} onClick={handleToggleTheme}>
-        {lightTheme ? '🌚' : '🌞'}
-      </button>
-    </div>
+      <div className={s.switchButton}>
+        <div className={cn(s.themeArt, s.light, { [s.show]: isLight })}>🌞</div>
+        <div className={cn(s.themeArt, s.dark, { [s.show]: isDark })}>🌚</div>
+      </div>
+    </button>
   );
 };

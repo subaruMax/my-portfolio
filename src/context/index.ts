@@ -1,1 +1,2 @@
-export * from './mainContext';
+export * from './themeContext';
+export * from './generalContextProvider';

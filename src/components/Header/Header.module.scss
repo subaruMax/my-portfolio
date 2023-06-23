@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+  padding: 10px 24px;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0 0 6px var(--shadow-color);
+}
+
+.controls {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}

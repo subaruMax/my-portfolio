@@ -7,16 +7,6 @@ $side-padding: 24px;
   transition: background-color 0.3s ease-in-out, color 0.2s 0.2s ease-in-out;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(156, 153, 153);
-  padding: 10px $side-padding;
-  align-items: center;
-  text-transform: uppercase;
-  box-shadow: 0 0 6px rgb(36, 36, 36);
-}
-
 .content {
   display: flex;
   flex-direction: column;
