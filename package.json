@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run generate-icons && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "npm run lint -- --fix"
+    "lint-fix": "npm run lint -- --fix",
+    "generate-icons": "[ ! -f \"./scripts/generateIcons.js\" ] || node scripts/generateIcons.js"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
@@ -28,6 +29,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@types/lodash": "^4.14.195",
     "@types/negotiator": "^0.6.1",
     "eslint-config-prettier": "^8.8.0",

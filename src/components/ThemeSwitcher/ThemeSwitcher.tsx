@@ -32,10 +32,21 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
         [s.unset]: !theme
       })}
       onClick={handleChangeTheme}
+      data-theme-no-transition
     >
-      <div className={s.switchButton}>
-        <div className={cn(s.themeArt, s.light, { [s.show]: isLight })}>🌞</div>
-        <div className={cn(s.themeArt, s.dark, { [s.show]: isDark })}>🌚</div>
+      <div className={s.switchButton} data-theme-no-transition>
+        <div
+          className={cn(s.themeArt, s.light, { [s.show]: isLight })}
+          data-theme-no-transition
+        >
+          🌞
+        </div>
+        <div
+          className={cn(s.themeArt, s.dark, { [s.show]: isDark })}
+          data-theme-no-transition
+        >
+          🌚
+        </div>
       </div>
     </button>
   );

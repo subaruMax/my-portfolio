@@ -21,11 +21,12 @@ const RootLayout = ({ children }: Props) => {
     cookieStore.get(THEME_COOKIE_NAME)?.value ?? SupportedThemes.dark;
 
   return (
-    <html data-theme={theme}>
-      <body className={inter.className}>
+    <html>
+      <body className={inter.className} data-theme={theme}>
         <GeneralContextProvider cookieTheme={theme as SupportedThemes}>
           {children}
         </GeneralContextProvider>
+        <div id="react-portal"></div>
       </body>
     </html>
   );

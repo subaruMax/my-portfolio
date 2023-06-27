@@ -20,9 +20,16 @@
       }
     ],
     "paths": {
-      "@app/*": ["./src/*"]
+      "@app/*": ["./src/*"],
+      "@ui-kit": ["./src/components/ui-kit"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "general.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+, "scripts/generateIcons.js"  ],
   "exclude": ["node_modules"]
 }
