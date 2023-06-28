@@ -1,23 +1,38 @@
 :root {
   --header-height: 55px;
-  --font-play: Play, monospace;
+  --theme-transition-duration: 1s;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: color 1s ease-out, background-color 1.4s ease-out;
+}
+
+html {
+  transition: background-color 3s ease-out !important;
+}
+
+html[data-theme-transition='true'] * + *:not([data-theme-no-transition]),
+#react-portal {
+  --theme-transition-duration: 1s ease-out;
+  transition: color var(--theme-transition-duration),
+    background-color var(--theme-transition-duration);
 }
 
 html,
 body {
+  font-family: var(--font-play);
   background-color: var(--bg-color);
   color: var(--text-color);
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
-  font-family: var(--font-play);
+}
+
+#react-portal {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1,
@@ -71,7 +86,7 @@ a {
   --special-shadow-color: rgba(69, 95, 124, 1);
   --special-mark-color: rgba(255, 255, 255, 0.08);
   --light-color: rgba(237, 244, 255, 1);
-  --dark-color: rgba(51, 72, 96, 1);
+  --dark-color: #334860;
 }
 
 /* reset css  */

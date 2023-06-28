@@ -1,12 +1,18 @@
 import { GeneralContextProvider, ThemeContextProvider } from '@app/context';
 import { ReactNode } from 'react';
-import '@app/styles/index.css';
 import { Play } from 'next/font/google';
 import { THEME_COOKIE_NAME } from '@app/constants/cookies';
 import { cookies } from 'next/headers';
 import { SupportedThemes } from '@app/types/general';
+import '@app/styles/index.css';
 
-const inter = Play({ weight: ['400', '700'], subsets: ['cyrillic'] });
+const playFont = Play({
+  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['cyrillic'],
+  display: 'swap',
+  variable: '--font-play'
+});
 
 type Props = {
   children: ReactNode;
@@ -21,11 +27,12 @@ const RootLayout = ({ children }: Props) => {
     cookieStore.get(THEME_COOKIE_NAME)?.value ?? SupportedThemes.dark;
 
   return (
-    <html data-theme={theme}>
-      <body className={inter.className}>
+    <html className={`${playFont.variable} ${playFont.className}`}>
+      <body data-theme={theme}>
         <GeneralContextProvider cookieTheme={theme as SupportedThemes}>
           {children}
         </GeneralContextProvider>
+        <div id="react-portal"></div>
       </body>
     </html>
   );

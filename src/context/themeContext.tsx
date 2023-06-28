@@ -34,8 +34,10 @@ export const ThemeContextProvider: FC<ThemeContextProviderProps> = ({
 }) => {
   const [cookies, setCookie] = useCookies([THEME_COOKIE_NAME]);
   const [theme, setTheme] = useState<SupportedThemes>(cookieTheme);
+  const [transition, setTransition] = useState(false);
 
   const toggleTheme = (themeName: SupportedThemes) => {
+    setTransition(true);
     setTheme(themeName);
     document.body.setAttribute('data-theme', themeName);
     setCookie(THEME_COOKIE_NAME, themeName, {
@@ -47,12 +49,23 @@ export const ThemeContextProvider: FC<ThemeContextProviderProps> = ({
 
   useEffect(() => {
     const html = document.querySelector('html');
-    const dataTheme = html?.getAttribute('data-theme');
+    const portal = document.querySelector('#react-portal');
 
-    if (dataTheme) {
-      setTheme(dataTheme as SupportedThemes);
+    const removeThemeTransition = () => {
+      html?.removeAttribute('data-theme-transition');
+      setTransition(false);
+    };
+
+    if (transition) {
+      html?.setAttribute('data-theme-transition', 'true');
     }
-  }, []);
+
+    portal?.addEventListener('transitionend', removeThemeTransition);
+
+    return () => {
+      portal?.removeEventListener('transitionend', removeThemeTransition);
+    };
+  }, [transition]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
