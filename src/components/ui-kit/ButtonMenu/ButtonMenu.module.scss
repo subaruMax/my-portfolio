@@ -48,7 +48,7 @@
     .rhombus {
       border: 1px solid var(--special-bg-color);
       background: var(--dark-color);
-      box-shadow: 0px 0px 4px 0px rgba(118, 75, 186, 0.5);
+      box-shadow: 0px 0px 4px 0px var(--special-bg-color);
     }
 
     .rhombus.top {
@@ -69,8 +69,8 @@
 
     .inner {
       border-radius: 27px;
-      background: var(--dark-color, #373245);
-      box-shadow: 0px 0px 3px 3px #997cd2 inset;
+      background: var(--dark-color);
+      box-shadow: 0px 0px 3px 3px var(--special-bg-color) inset;
       border-color: transparent;
     }
   }
@@ -84,7 +84,7 @@
     .rhombus {
       border: 1px solid var(--dark-color);
       background: var(--special-bg-color);
-      box-shadow: 0px 0px 4px 0px rgba(118, 75, 186, 0.5);
+      box-shadow: 0px 0px 4px 0px var(--special-bg-color);
     }
 
     .rhombus.top {
@@ -104,8 +104,8 @@
     }
 
     .inner {
-      background: var(--dark-color, #373245);
-      box-shadow: 0px 0px 1px 1px #997cd2 inset;
+      background: transparent;
+      box-shadow: 0px 0px 1px 1px var(--special-bg-color) inset;
       border-color: transparent;
     }
   }

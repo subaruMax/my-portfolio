@@ -1,6 +1,9 @@
 {
-  "header": {
-    "title": "Портфолио"
+  "Header": {
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "portfolio": "Портфолио",
+    "contacts": "Контакты"
   },
   "footer": {},
   "home": {
