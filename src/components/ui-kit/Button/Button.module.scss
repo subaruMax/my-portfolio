@@ -1,0 +1,120 @@
+.root {
+  cursor: pointer;
+  position: relative;
+  padding: 0 36px;
+
+  &:hover,
+  &.active {
+    .rhombus.outer,
+    .content {
+      border-color: var(--special-color);
+      background-color: var(--dark-color);
+      color: var(--special-text-color);
+    }
+
+    .rhombus.inner {
+      border-color: var(--special-color);
+    }
+
+    .inner.left {
+      transform: translate(-70%, -50%) rotate(45deg);
+    }
+
+    .inner.right {
+      transform: translate(-30%, -50%) rotate(45deg);
+    }
+  }
+
+  &:active,
+  &.active {
+    .glowLine {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+    pointer-events: none;
+
+    .content {
+      color: var(--border-color);
+    }
+  }
+}
+
+.glowLine {
+  height: 2px;
+  background-color: var(--special-color);
+  box-shadow: 0 0 5px 1px var(--special-bg-color);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+.rhombus {
+  position: absolute;
+  border: 1px solid var(--border-color);
+  top: 50%;
+  transform-origin: center;
+
+  &.outer {
+    width: 28px;
+    height: 28px;
+    background-color: var(--subtle-color);
+  }
+
+  &.outer.left {
+    left: 34px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &.outer.right {
+    right: 34px;
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  &.inner {
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+    background-color: transparent;
+  }
+
+  &.inner.left {
+    left: calc(0% + 24px);
+    border-style: dashed dashed solid solid;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &.inner.right {
+    left: calc(100% - 24px);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-style: solid solid dashed dashed;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background-color: var(--subtle-color);
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: var(--font-play);
+  position: relative;
+  border-radius: 3px;
+}
+
+.rhombus,
+.content {
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
