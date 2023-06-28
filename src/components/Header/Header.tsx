@@ -12,7 +12,7 @@ interface HeaderProps {}
 export const Header: FC<HeaderProps> = () => {
   return (
     <header className={s.root}>
-      - Maksym K.
+      UI KIT - building in progress
       <div className={s.controls}>
         <LocaleSwitcher />
         <ThemeSwitcher />
