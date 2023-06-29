@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import { SupportedThemes } from '@app/types/general';
 import useThemeContext from '@app/context/themeContext';
+import { Icon } from '@ui-kit';
 
 import s from './ThemeSwitcher.module.scss';
 
@@ -26,27 +27,19 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
 
   return (
     <button
-      className={cn(s.main, className, {
+      className={cn(s.root, className, {
         [s.light]: isLight,
-        [s.dark]: isDark,
-        [s.unset]: !theme
+        [s.dark]: isDark
       })}
       onClick={handleChangeTheme}
       data-theme-no-transition
     >
-      <div className={s.switchButton} data-theme-no-transition>
-        <div
-          className={cn(s.themeArt, s.light, { [s.show]: isLight })}
-          data-theme-no-transition
-        >
-          🌞
-        </div>
-        <div
-          className={cn(s.themeArt, s.dark, { [s.show]: isDark })}
-          data-theme-no-transition
-        >
-          🌚
-        </div>
+      <div className={s.rails}>
+        <div className={s.leftArrow}></div>
+        <div className={s.rightArrow}></div>
+      </div>
+      <div className={s.rhombus} data-theme-no-transition>
+        <Icon className={s.icon} name={isLight ? 'sun' : 'moon'} />
       </div>
     </button>
   );

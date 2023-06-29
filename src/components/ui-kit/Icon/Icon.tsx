@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import icons from 'public/icons';
 
-import s from './Icons.module.scss';
+import s from './Icon.module.scss';
 
 export type IconName = keyof typeof icons;
 
