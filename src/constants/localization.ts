@@ -1,4 +1,4 @@
 export const i18n = {
   defaultLocale: 'en',
-  locales: { en: '🇺🇸 en', ua: '🇺🇦 ua', ru: '🇺🇦 ru' }
+  locales: { en: 'flag-gb', ua: 'flag-ua', ru: 'flag-ua' }
 };

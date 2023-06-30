@@ -46,8 +46,9 @@
 
   .controls {
     opacity: 1;
-    max-width: 100px;
+    max-width: 190px;
     transition-delay: 0.1s;
+    overflow: visible;
   }
 }
 
@@ -86,11 +87,26 @@
 }
 
 .controls {
+  display: flex;
+  align-content: center;
   transition: all 0.3s ease-out;
   opacity: 0;
   overflow: hidden;
   width: 100%;
   max-width: 0;
+  gap: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 27px;
+    background-color: var(--border-color);
+    top: 50%;
+    left: 73px;
+    transform: translate(0, -50%);
+  }
 }
 
 .menuButton {

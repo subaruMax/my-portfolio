@@ -7,7 +7,7 @@ import s from './Icon.module.scss';
 
 export type IconName = keyof typeof icons;
 
-export interface IconProps extends React.HTMLAttributes<SVGElement> {
+interface IconProps extends React.HTMLAttributes<SVGElement> {
   className?: string;
   name: IconName;
   onClick?: () => void;
