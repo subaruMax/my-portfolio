@@ -29,13 +29,18 @@ export const Header: FC<HeaderProps> = () => {
   return (
     <header
       className={cn(s.root, {
-        [s.minimized]: scrollPosition > HEADER_MINIMIZE_OFFSET,
+        [s.minimized]: scrollPosition.current > HEADER_MINIMIZE_OFFSET,
         [s.controlsOpened]: controlsOpened
       })}
     >
       <Logo className={s.logo} />
       <div className={s.nav}>
-        <div className={s.line} />
+        <div
+          className={s.line}
+          style={{
+            backgroundPositionX: `-${scrollPosition.currentPercent}%`
+          }}
+        />
         {NAVIGATION.sort((a, b) => a.index - b.index).map(link => (
           <Link href={''} key={link.value}>
             <Button>{t(link.value)}</Button>
