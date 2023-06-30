@@ -3,13 +3,23 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { startTransition } from 'react';
-import cn from 'classnames';
 
 import { i18n } from '@app/constants/localization';
+import { Select } from '@ui-kit';
 
-import s from './LocaleSwitcher.module.scss';
+type LocaleSwitcherProps = {
+  className?: string;
+};
 
-export const LocaleSwitcher = () => {
+const LOCALE_OPTIONS = Object.entries(i18n.locales).map(lang => ({
+  value: lang[0],
+  label: lang[0].toUpperCase(),
+  icon: lang[1]
+}));
+
+export const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({
+  className
+}) => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -22,25 +32,16 @@ export const LocaleSwitcher = () => {
     segments[1] = locale;
 
     return startTransition(() => {
-      router.replace(segments.join('/'));
+      router.push(segments.join('/'));
     });
   }
 
   return (
-    <div className={s.root}>
-      {Object.entries(i18n.locales).map(lang => {
-        return (
-          <button
-            onClick={() => onLanguageChange(lang[0])}
-            key={lang[0]}
-            className={cn(s.option, {
-              [s.active]: locale === lang[0]
-            })}
-          >
-            {lang[1]}
-          </button>
-        );
-      })}
-    </div>
+    <Select
+      className={className}
+      value={locale}
+      options={LOCALE_OPTIONS}
+      onSelect={val => onLanguageChange(val as string)}
+    />
   );
 };

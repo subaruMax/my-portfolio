@@ -3,17 +3,17 @@
 import { FC, useState } from 'react';
 import Link from 'next/link';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { Logo } from '@app/components/Logo';
 import { Button, ButtonMenu } from '@ui-kit';
 import useScrollPosition from '@app/hooks/useScrollPosition';
 import { HEADER_MINIMIZE_OFFSET } from '@app/constants/settings';
 import { NAVIGATION } from '@app/constants/navigation';
-
+import { LocaleSwitcher } from '@app/components/LocaleSwitcher';
 import { ThemeSwitcher } from '@app/components/ThemeSwitcher';
 
 import s from './Header.module.scss';
-import { useTranslations } from 'next-intl';
 
 interface HeaderProps {}
 
@@ -49,6 +49,7 @@ export const Header: FC<HeaderProps> = () => {
       />
       <div className={s.controls}>
         <ThemeSwitcher />
+        <LocaleSwitcher />
       </div>
     </header>
   );

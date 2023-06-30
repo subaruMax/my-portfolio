@@ -4,9 +4,19 @@
 // icons are used in Icon component
 
 import battery from './battery.svg';
+import dropdown from './dropdown.svg';
+import flagGb from './flag-gb.svg';
+import flagUa from './flag-ua.svg';
+import moon from './moon.svg';
+import sun from './sun.svg';
 
 const icons = {
   'battery': battery,
+  'dropdown': dropdown,
+  'flag-gb': flagGb,
+  'flag-ua': flagUa,
+  'moon': moon,
+  'sun': sun,
 };
 
 export default icons;
