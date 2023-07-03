@@ -1,4 +1,4 @@
-import { GeneralContextProvider, ThemeContextProvider } from '@app/context';
+import { GeneralContextProvider } from '@app/context';
 import { ReactNode } from 'react';
 import { Play } from 'next/font/google';
 import { THEME_COOKIE_NAME } from '@app/constants/cookies';
