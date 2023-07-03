@@ -1,7 +1,7 @@
 import { LoaderMain } from '@app/components/LoaderMain';
 import s from './Page.module.scss';
 
-const Home = async () => {
+const Home = () => {
   return (
     <div className={s.root}>
       <div className={s.works}>

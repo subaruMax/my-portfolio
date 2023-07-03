@@ -1,9 +1,10 @@
+import { LoaderMain } from '@app/components/LoaderMain';
 import s from './Loading.module.scss';
 
 const Loading = () => {
   return (
     <div className={s.root}>
-      <div className={s.content}>LOADING...</div>
+      <LoaderMain className={s.loader} />
     </div>
   );
 };
