@@ -38,7 +38,12 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
         <div className={s.leftArrow}></div>
         <div className={s.rightArrow}></div>
       </div>
-      <div className={s.rhombus} data-theme-no-transition>
+      <div
+        className={s.rhombus}
+        data-theme-no-transition
+        draggable={true}
+        onDrag={e => console.log(e)}
+      >
         <Icon className={s.icon} name={isLight ? 'sun' : 'moon'} />
       </div>
     </button>
