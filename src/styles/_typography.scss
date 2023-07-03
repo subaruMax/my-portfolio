@@ -1,0 +1,120 @@
+@mixin heading1 {
+  font-family: var(--font-play);
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading1 {
+  @include heading1;
+}
+
+@mixin heading2 {
+  font-family: var(--font-play);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading2 {
+  @include heading2;
+}
+
+@mixin heading3 {
+  font-family: var(--font-play);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading3 {
+  @include heading3;
+}
+
+@mixin heading4 {
+  font-family: var(--font-play);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading4 {
+  @include heading4;
+}
+
+@mixin heading5 {
+  font-family: var(--font-play);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading5 {
+  @include heading5;
+}
+
+@mixin heading6 {
+  font-family: var(--font-play);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%heading6 {
+  @include heading6;
+}
+
+@mixin button {
+  font-family: var(--font-play);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+%button {
+  @include button;
+}
+
+@mixin paragraph1 {
+  font-family: var(--font-play);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+%paragraph1 {
+  @include paragraph1;
+}
+
+@mixin paragraph2 {
+  font-family: var(--font-play);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+%paragraph2 {
+  @include paragraph2;
+}
+
+@mixin paragraph3 {
+  font-family: var(--font-play);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+%paragraph3 {
+  @include paragraph3;
+}

@@ -4,7 +4,7 @@ import { Play } from 'next/font/google';
 import { THEME_COOKIE_NAME } from '@app/constants/cookies';
 import { cookies } from 'next/headers';
 import { SupportedThemes } from '@app/types/general';
-import '@app/styles/index.css';
+import '@app/styles/index.scss';
 
 const playFont = Play({
   weight: ['400', '700'],

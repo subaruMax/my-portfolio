@@ -1,4 +1,7 @@
+@import "@styles/typography";
+
 .root {
+  @include paragraph1;
   position: relative;
   min-width: 50px;
   &:hover {
@@ -39,7 +42,6 @@
   background: var(--subtle-color);
   color: var(--text-color);
   gap: 6px;
-  font-size: 16px;
   font-family: var(--font-play);
   transition: all 0.3s ease-out;
   border-radius: 2px;
@@ -86,8 +88,6 @@
   width: 100%;
   padding: 2px 12px;
   transition: background-color 0.3s ease-out;
-  font-family: var(--font-play);
-  font-size: 16px;
 
   &:hover {
     background-color: var(--dark-color);

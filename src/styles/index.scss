@@ -1,0 +1,57 @@
+@use 'typography';
+@use 'reset';
+@use 'mixins';
+@use 'colors';
+
+:root {
+  --header-height: 55px;
+  --theme-transition-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  transition: background-color 3s ease-out !important;
+}
+
+html[data-theme-transition='true'] * + *:not([data-theme-no-transition]),
+#react-portal {
+  --theme-transition-duration: 1s ease-out;
+  transition: color var(--theme-transition-duration),
+    background-color var(--theme-transition-duration);
+}
+
+html,
+body {
+  @include mixins.custom-scroll;
+  font-family: var(--font-play);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#react-portal {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-soft-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
