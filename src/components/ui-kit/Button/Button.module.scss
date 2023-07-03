@@ -1,3 +1,5 @@
+@import '@styles/typography';
+
 .root {
   cursor: pointer;
   position: relative;
@@ -98,6 +100,7 @@
 }
 
 .content {
+  @include button;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -107,9 +110,6 @@
   color: var(--text-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  font-size: 16px;
-  text-transform: uppercase;
-  font-family: var(--font-play);
   position: relative;
   border-radius: 3px;
 }

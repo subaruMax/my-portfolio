@@ -21,7 +21,8 @@
     ],
     "paths": {
       "@app/*": ["./src/*"],
-      "@ui-kit": ["./src/components/ui-kit"]
+      "@ui-kit": ["./src/components/ui-kit"],
+      "@styles/*": ["./src/styles/*"],
     }
   },
   "include": [
