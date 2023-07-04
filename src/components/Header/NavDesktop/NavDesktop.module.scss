@@ -25,12 +25,11 @@
 .line {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -50px;
   transform: translate(0, -50%);
-  width: 100%;
+  width: 105%;
   height: 1px;
-  background-color: var(--border-color);
-  transition: transform 0.3s ease-out;
+  background: linear-gradient(90deg, transparent 0%,  var(--border-color) 5%, var(--border-color) 95%,  transparent 100%)
 }
 
 .logo {
