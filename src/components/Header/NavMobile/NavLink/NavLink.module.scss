@@ -1,0 +1,35 @@
+@import '@styles/typography';
+
+.root {
+  @include button;
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  &.active {
+    background: linear-gradient(
+      90deg,
+      var(--border-color) 0%,
+      transparent 100%
+    );
+    color: var(--special-text-color);
+    .rhombus {
+      transform: translate(-45%, -50%) rotate(45deg);
+    }
+  }
+}
+
+.rhombus {
+  border: 1px solid var(--special-color);
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-18px, -50%) rotate(45deg);
+  transition: transform 0.3s ease-in;
+  box-shadow: 0 0 5px 1px var(--special-bg-color) inset;
+}

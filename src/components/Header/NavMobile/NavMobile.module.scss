@@ -47,38 +47,63 @@
 }
 
 .menu {
-  @include side-paddings;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100vw;
-  top: -30px;
-  padding-top: 130px;
+  top: -18px;
+  padding-top: 120px;
   left: 0;
-  height: calc(100vh + 30px);
+  height: 100vh;
   background-color: var(--subtle-color);
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   overflow-y: auto;
-  height: 100%;
   button {
     color: var(--text-color);
   }
 }
 
 .menuLine {
-  top: 100px;
+  top: 90px;
   height: 2px;
-  left: -40px;
+  left: 0;
   background: linear-gradient(90deg, transparent 0%, var(--border-color) 15%);
   transform-origin: right;
   position: fixed;
-  width: calc(100vw + 40px);
+  width: 100vw;
   z-index: 1;
 }
 
 .localeSwitcher {
-  max-width: 100px;
+  max-width: 90px;
+}
+
+.menuItem {
+  @include side-paddings;
+}
+
+.controls {
+  @include side-paddings;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 18px;
+  padding-bottom: 110px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  margin-bottom: auto;
+  justify-content: flex-end;
+  background-color: var(--bg-color);
+  align-items: flex-start;
+}
+
+.controlsWrapper {
+  display: flex;
+  gap: 24px;
 }

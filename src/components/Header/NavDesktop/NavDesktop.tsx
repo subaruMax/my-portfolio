@@ -9,6 +9,7 @@ import { ControlsDesktop } from './ControlsDesktop';
 import { Logo } from '@app/components/Logo';
 
 import s from './NavDesktop.module.scss';
+import { useSearchParams } from 'next/navigation';
 
 type NavDesktopProps = {
   isMinimized: boolean;
@@ -17,6 +18,8 @@ type NavDesktopProps = {
 export const NavDesktop: React.FC<NavDesktopProps> = ({ isMinimized }) => {
   const t = useTranslations('Header');
   const [controlsOpened, setControlsOpened] = useState(false);
+  const searchParams = useSearchParams();
+  const activePage = searchParams.get('section') || '';
 
   const toggleControls = () => {
     setControlsOpened(!controlsOpened);
@@ -34,7 +37,9 @@ export const NavDesktop: React.FC<NavDesktopProps> = ({ isMinimized }) => {
         <div className={s.line} />
         {NAVIGATION.sort((a, b) => a.index - b.index).map(link => (
           <Link href={link.href} key={link.value}>
-            <Button>{t(link.value)}</Button>
+            <Button active={link.href.includes(activePage)}>
+              {t(link.value)}
+            </Button>
           </Link>
         ))}
         <ButtonMenu
