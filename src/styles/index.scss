@@ -19,9 +19,9 @@ html {
   transition: background-color 3s ease-out !important;
 }
 
-html[data-theme-transition='true'] * + *:not([data-theme-no-transition]),
+html[data-theme-transition='true'],
+:not([data-theme-no-transition]),
 #react-portal {
-  --theme-transition-duration: 1s ease-out;
   transition: color var(--theme-transition-duration),
     background-color var(--theme-transition-duration);
 }
@@ -55,4 +55,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-

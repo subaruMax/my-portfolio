@@ -33,12 +33,13 @@ $circles-amount: 9;
   position: absolute;
   transform-style: preserve-3d;
   border-radius: 50%;
-  box-sizing: border-box;
   background-color: var(--shadow-color);
+  box-shadow: 0 0 35px 1px var(--special-bg-color),
+    inset 0 0 35px 15px var(--special-bg-color);
 
   @for $i from 1 through $circles-amount {
     &:nth-child(#{$i}) {
-      transform: rotateZ($i / $circles-amount * 360deg) rotateX(63deg);
+      transform: rotateZ($i / $circles-amount * 360deg) rotateX(80deg);
     }
   }
 }
@@ -48,22 +49,5 @@ $circles-amount: 9;
   }
   100% {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-}
-
-@keyframes color-change {
-  0% {
-    box-shadow: 0 0 24px var(--special-bg-color),
-      inset 0 0 5px 5px var(--special-bg-color);
-  }
-  50% {
-    filter: hue-rotate(25deg);
-    box-shadow: 0 0 55px var(--special-bg-color),
-      inset 0 0 55px 5px var(--special-bg-color);
-  }
-
-  100% {
-    box-shadow: 0 0 24px var(--special-bg-color),
-      inset 0 0 5px 5px var(--special-bg-color);
   }
 }

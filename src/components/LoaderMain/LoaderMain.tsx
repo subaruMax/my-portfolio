@@ -12,9 +12,9 @@ const CIRCLES_AMOUNT = 9;
 const LoaderMain: React.FC<LoaderMainProps> = ({ className }) => {
   return (
     <div className={cn(s.root, className)}>
-      <div className={s.plane}>
+      <div className={s.plane} data-theme-no-transition>
         {new Array(CIRCLES_AMOUNT).fill(null).map(i => (
-          <div key={i} className={s.circle} />
+          <div key={i} className={s.circle} data-theme-no-transition />
         ))}
       </div>
     </div>
