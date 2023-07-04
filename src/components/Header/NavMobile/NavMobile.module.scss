@@ -1,0 +1,84 @@
+@use '@styles/media';
+@import '@styles/mixins';
+
+.root {
+  flex-grow: 1;
+  @include media.tablet-landscape {
+    display: none;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  z-index: 999;
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+}
+
+.line {
+  position: absolute;
+  transform: translate(0, -50%);
+  width: 150px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-color) 25%);
+
+  &:nth-of-type(1) {
+    right: -90px;
+    top: 30%;
+    height: 1px;
+  }
+
+  &:nth-of-type(2) {
+    top: 50%;
+    right: -80px;
+    height: 2px;
+  }
+
+  &:nth-of-type(3) {
+    right: -90px;
+    top: 70%;
+    height: 1px;
+  }
+}
+
+.menu {
+  @include side-paddings;
+  position: fixed;
+  width: 100vw;
+  top: -30px;
+  padding-top: 130px;
+  left: 0;
+  height: calc(100vh + 30px);
+  background-color: var(--subtle-color);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-y: auto;
+  height: 100%;
+  button {
+    color: var(--text-color);
+  }
+}
+
+.menuLine {
+  top: 100px;
+  height: 2px;
+  left: -40px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-color) 15%);
+  transform-origin: right;
+  position: fixed;
+  width: calc(100vw + 40px);
+  z-index: 1;
+}
+
+.localeSwitcher {
+  max-width: 100px;
+}

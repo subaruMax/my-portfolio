@@ -22,9 +22,13 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
   }
 
   return (
-    <div className={cn(s.root, className)}>
-      <Image src={logoImage} width={50} height={40} alt="Logo Maksym Khaiuk" />
-    </div>
+    <Image
+      className={cn(s.root, className)}
+      src={logoImage}
+      width={50}
+      height={40}
+      alt="Logo Maksym Khaiuk"
+    />
   );
 };
 

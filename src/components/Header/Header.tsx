@@ -6,6 +6,7 @@ import cn from 'classnames';
 import useScrollPosition from '@app/hooks/useScrollPosition';
 import { HEADER_MINIMIZE_OFFSET } from '@app/constants/settings';
 import { NavDesktop } from './NavDesktop';
+import { NavMobile } from './NavMobile';
 
 import s from './Header.module.scss';
 
@@ -13,7 +14,6 @@ interface HeaderProps {}
 
 export const Header: FC<HeaderProps> = () => {
   const scrollPosition = useScrollPosition();
-
   const minimized = scrollPosition.current > HEADER_MINIMIZE_OFFSET;
 
   return (
@@ -23,6 +23,7 @@ export const Header: FC<HeaderProps> = () => {
       })}
     >
       <NavDesktop isMinimized={minimized} />
+      <NavMobile />
     </header>
   );
 };
