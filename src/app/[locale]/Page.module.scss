@@ -1,5 +1,9 @@
+@import '@styles/mixins';
+
 .root {
-  padding: 120px 48px;
+  @include side-paddings;
+  padding-top: 120px;
+  padding-bottom: 120px;
   min-height: 200vh;
 }
 
