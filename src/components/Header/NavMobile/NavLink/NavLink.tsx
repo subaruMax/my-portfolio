@@ -19,7 +19,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   const { push } = useRouter();
   const searchParams = useSearchParams();
-  const activePage = searchParams.get('section') || '';
+  const activePage = searchParams.get('section');
 
   const handleClick = () => {
     onClick();
@@ -30,7 +30,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
     <button
       className={cn(
         s.root,
-        { [s.active]: href.includes(activePage) },
+        { [s.active]: Boolean(activePage && href.includes(activePage)) },
         className
       )}
       onClick={handleClick}

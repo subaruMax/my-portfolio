@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className={s.root}>
       <div className={s.works}>
-        <LoaderMain />
+        <LoaderMain className={s.loader} />
         <h2 data-text="Works in progress..." className={s.glitch}>
           Works in progress...
         </h2>
