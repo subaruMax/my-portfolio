@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  align-content: center;
+  gap: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 27px;
+    background-color: var(--border-color);
+    top: 50%;
+    left: 73px;
+    transform: translate(0, -50%);
+  }
+}

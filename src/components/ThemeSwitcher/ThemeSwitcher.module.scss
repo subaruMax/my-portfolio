@@ -67,6 +67,7 @@
   border-bottom: 1px solid var(--border-color);
   transform: translate(-50%, -50%);
   transition: border-color 0.3s ease-out;
+  background-color: var(--subtle-color);
 }
 
 .leftArrow,
@@ -76,6 +77,7 @@
   top: 50%;
   position: absolute;
   transition: border-color 0.3s ease-out;
+  background-color: var(--subtle-color);
 }
 .leftArrow {
   left: 0;
