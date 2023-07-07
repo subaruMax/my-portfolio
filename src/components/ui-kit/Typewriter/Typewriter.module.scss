@@ -1,0 +1,28 @@
+
+.bracket {
+  animation: blinking 0.5s ease-out alternate-reverse infinite;
+  color: var(--special-bg-color);
+  text-shadow: 0 0 5px var(--special-bg-color);
+  position: absolute;
+  vertical-align: middle;
+
+  &.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &.hidden {
+    opacity: 0;
+    animation: none;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

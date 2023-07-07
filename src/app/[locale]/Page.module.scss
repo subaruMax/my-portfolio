@@ -1,12 +1,9 @@
 @use '@styles/media';
+@import '@styles/typography';
 @import '@styles/mixins';
 
-
 .root {
-  @include side-paddings;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  min-height: 200vh;
+  min-height: 500vh;
 }
 
 @mixin glitchCopy {

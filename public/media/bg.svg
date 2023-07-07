@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2560 1600" enable-background="new 0 0 2560 1600" xml:space="preserve">
+<pattern  width="521.347" height="301" patternUnits="userSpaceOnUse" id="New_Pattern" viewBox="173.782 -451.5 521.347 301" overflow="visible">
+	<g>
+		<rect x="173.782" y="-451.5" fill="none" width="521.347" height="301"/>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="781.732,-300.5 868.335,-150.5 781.732,-0.5 608.527,-0.5 
+				521.925,-150.5 608.527,-300.5 			"/>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="608.235,-200.669 695.13,-250.837 782.024,-200.669 
+				782.024,-100.331 695.13,-50.163 608.235,-100.331 			"/>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-200.669" x2="695.13" y2="-250.837"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-200.669" x2="782.024" y2="-200.669"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-200.669" x2="782.024" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-200.669" x2="695.13" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-200.669" x2="608.235" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-250.837" x2="782.024" y2="-200.669"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-250.837" x2="782.024" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-250.837" x2="695.13" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-250.837" x2="608.235" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-200.669" x2="695.13" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-200.669" x2="608.235" y2="-100.331"/>
+			</g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-300.5" x2="608.527" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-300.5" x2="521.925" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-300.5" x2="608.527" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-150.5" x2="608.527" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-150.5" x2="521.925" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-150.5" x2="608.527" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-0.5" x2="521.925" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-0.5" x2="608.527" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.527" y1="-0.5" x2="521.925" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.527" y1="-0.5" x2="608.527" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.925" y1="-150.5" x2="608.527" y2="-300.5"/>
+			</g>
+		</g>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="260.385,-300.5 346.988,-150.5 260.385,-0.5 87.18,-0.5 
+				0.577,-150.5 87.18,-300.5 			"/>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="86.888,-200.669 173.782,-250.837 260.677,-200.669 
+				260.677,-100.331 173.782,-50.163 86.888,-100.331 			"/>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-200.669" x2="173.782" y2="-250.837"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-200.669" x2="260.677" y2="-200.669"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-200.669" x2="260.677" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-200.669" x2="173.782" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-250.837" x2="260.677" y2="-200.669"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-250.837" x2="260.677" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-250.837" x2="173.782" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-250.837" x2="86.888" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-200.669" x2="260.677" y2="-100.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-200.669" x2="173.782" y2="-50.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-200.669" x2="86.888" y2="-100.331"/>
+			</g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-300.5" x2="346.988" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-300.5" x2="260.385" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-300.5" x2="87.18" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-300.5" x2="0.577" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-300.5" x2="87.18" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-150.5" x2="260.385" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-150.5" x2="87.18" y2="-0.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-150.5" x2="0.577" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-150.5" x2="87.18" y2="-300.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-0.5" x2="0.577" y2="-150.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-0.5" x2="87.18" y2="-300.5"/>
+			</g>
+		</g>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="781.732,-601.5 868.335,-451.5 781.732,-301.5 
+				608.527,-301.5 521.925,-451.5 608.527,-601.5 			"/>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="608.235,-501.669 695.13,-551.837 782.024,-501.669 
+				782.024,-401.331 695.13,-351.163 608.235,-401.331 			"/>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-501.669" x2="782.024" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-501.669" x2="695.13" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.235" y1="-501.669" x2="608.235" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-551.837" x2="782.024" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-551.837" x2="695.13" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-551.837" x2="608.235" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-501.669" x2="695.13" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-501.669" x2="608.235" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-401.331" x2="695.13" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="782.024" y1="-401.331" x2="608.235" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="695.13" y1="-351.163" x2="608.235" y2="-401.331"/>
+			</g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-601.5" x2="608.527" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-601.5" x2="521.925" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-451.5" x2="608.527" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-451.5" x2="521.925" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="868.335" y1="-451.5" x2="608.527" y2="-601.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-301.5" x2="608.527" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-301.5" x2="521.925" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="781.732" y1="-301.5" x2="608.527" y2="-601.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.527" y1="-301.5" x2="521.925" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="608.527" y1="-301.5" x2="608.527" y2="-601.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.925" y1="-451.5" x2="608.527" y2="-601.5"/>
+			</g>
+		</g>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="521.059,-451 607.661,-301 521.059,-151 347.854,-151 
+				261.251,-301 347.854,-451 			"/>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="347.561,-351.169 434.456,-401.337 521.351,-351.169 
+				521.351,-250.831 434.456,-200.663 347.561,-250.831 			"/>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.561" y1="-351.169" x2="434.456" y2="-401.337"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.561" y1="-351.169" x2="521.351" y2="-351.169"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.561" y1="-351.169" x2="521.351" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.561" y1="-351.169" x2="434.456" y2="-200.663"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.561" y1="-351.169" x2="347.561" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="434.456" y1="-401.337" x2="521.351" y2="-351.169"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="434.456" y1="-401.337" x2="521.351" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="434.456" y1="-401.337" x2="434.456" y2="-200.663"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="434.456" y1="-401.337" x2="347.561" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.351" y1="-351.169" x2="521.351" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.351" y1="-351.169" x2="434.456" y2="-200.663"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.351" y1="-351.169" x2="347.561" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.351" y1="-250.831" x2="434.456" y2="-200.663"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.351" y1="-250.831" x2="347.561" y2="-250.831"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="434.456" y1="-200.663" x2="347.561" y2="-250.831"/>
+			</g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-451" x2="607.661" y2="-301"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-451" x2="521.059" y2="-151"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-451" x2="347.854" y2="-151"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-451" x2="261.251" y2="-301"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-451" x2="347.854" y2="-451"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="607.661" y1="-301" x2="521.059" y2="-151"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="607.661" y1="-301" x2="347.854" y2="-151"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="607.661" y1="-301" x2="261.251" y2="-301"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="607.661" y1="-301" x2="347.854" y2="-451"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-151" x2="347.854" y2="-151"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-151" x2="261.251" y2="-301"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="521.059" y1="-151" x2="347.854" y2="-451"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.854" y1="-151" x2="261.251" y2="-301"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="347.854" y1="-151" x2="347.854" y2="-451"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="261.251" y1="-301" x2="347.854" y2="-451"/>
+			</g>
+		</g>
+		<g>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="260.385,-601.5 346.988,-451.5 260.385,-301.5 
+				87.18,-301.5 0.577,-451.5 87.18,-601.5 			"/>
+			<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="86.888,-501.669 173.782,-551.837 260.677,-501.669 
+				260.677,-401.331 173.782,-351.163 86.888,-401.331 			"/>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-501.669" x2="260.677" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="86.888" y1="-501.669" x2="173.782" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-551.837" x2="260.677" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-551.837" x2="173.782" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-551.837" x2="86.888" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-501.669" x2="260.677" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-501.669" x2="173.782" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-501.669" x2="86.888" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-401.331" x2="173.782" y2="-351.163"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.677" y1="-401.331" x2="86.888" y2="-401.331"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="173.782" y1="-351.163" x2="86.888" y2="-401.331"/>
+			</g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-601.5" x2="346.988" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-601.5" x2="260.385" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-601.5" x2="87.18" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-601.5" x2="0.577" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-451.5" x2="260.385" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-451.5" x2="87.18" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-451.5" x2="0.577" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346.988" y1="-451.5" x2="87.18" y2="-601.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-301.5" x2="87.18" y2="-301.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-301.5" x2="0.577" y2="-451.5"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="260.385" y1="-301.5" x2="87.18" y2="-601.5"/>
+			</g>
+		</g>
+	</g>
+</pattern>
+<rect fill="url(#New_Pattern)" width="2560" height="1600"/>
+</svg>

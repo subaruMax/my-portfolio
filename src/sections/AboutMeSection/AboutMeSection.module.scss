@@ -1,0 +1,78 @@
+@use '@styles/media';
+@import '@styles/typography';
+@import '@styles/mixins';
+
+.root {
+  @include side-paddings;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 35%;
+
+  @include media.tablet-landscape {
+    padding-top: 180px;
+  }
+}
+.test {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
+
+  @include media.tablet-landscape {
+    max-width: 600px;
+    left: 20%;
+    top: 18%;
+    gap: 32px;
+  }
+}
+
+.title {
+  @include heading3;
+  color: var(--text-color);
+  text-transform: uppercase;
+
+  @include media.tablet-landscape {
+    @include heading1;
+  }
+}
+
+.description {
+  @include paragraph1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-transform: uppercase;
+}
+
+.planet {
+  left: 50%;
+  bottom: -30%;
+  position: absolute;
+  @include media.tablet-landscape {
+    left: 57%;
+    bottom: unset;
+  }
+}
+
+.planetImage {
+  animation: planet 3s ease-in-out alternate-reverse infinite;
+  width: 400px;
+  @include media.tablet-landscape {
+    width: 680px;
+  }
+}
+
+@keyframes planet {
+  0% {
+    filter: drop-shadow(0 0 3px var(--special-bg-color));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px var(--special-bg-color));
+  }
+}

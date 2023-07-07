@@ -1,0 +1,23 @@
+@use '@styles/media';
+@import '@styles/typography';
+@import '@styles/mixins';
+
+.root {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 80px;
+  background-color: var(--bg-color);
+}
+
+.title {
+  @include heading1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.divider {
+  border-bottom: 3px solid var(--border-color);
+}

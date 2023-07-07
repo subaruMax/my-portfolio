@@ -8,5 +8,11 @@
   "footer": {},
   "home": {
     "title": "Portfolio - Maksym Khaiuk"
+  },
+  "AboutMe": {
+    "title": "Hey there, I'm Maksym",
+    "p1": "a front-end developer based in Odessa, Ukraine. With two years of commercial experience.",
+    "p2": "I specialize in JavaScript, TypeScript, React, and Next.js. My skills lie in crafting the front-end part of web applications. I am adept at creating modern, performant web applications that seamlessly integrate cutting-edge features.",
+    "p3": "If you're looking for a front-end developer to bring your project to life, I'm here to help. Let's collaborate and create something amazing together."
   }
 }

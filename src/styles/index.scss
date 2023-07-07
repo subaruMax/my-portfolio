@@ -19,11 +19,12 @@ html {
   transition: background-color 3s ease-out !important;
 }
 
-html[data-theme-transition='true'],
-:not([data-theme-no-transition]),
-#react-portal {
-  transition: color var(--theme-transition-duration),
-    background-color var(--theme-transition-duration);
+html[data-theme-transition='true'] {
+  > *:not([data-theme-no-transition]),
+  #react-portal {
+    transition: color var(--theme-transition-duration),
+      background-color var(--theme-transition-duration);
+  }
 }
 
 html,
@@ -47,8 +48,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: var(--text-soft-color);
+h6,
+p {
+  color: var(--text-color);
 }
 
 a {
