@@ -1,15 +1,14 @@
-import { LoaderMain } from '@app/components/LoaderMain';
+import { AboutMeSection, SkillsSection } from '@app/sections';
+import { AnimatedBg } from '@app/components/AnimatedBg';
+
 import s from './Page.module.scss';
 
 const Home = () => {
   return (
     <div className={s.root}>
-      <div className={s.works}>
-        <LoaderMain className={s.loader} />
-        <h2 data-text="Works in progress..." className={s.glitch}>
-          Works in progress...
-        </h2>
-      </div>
+      <AnimatedBg />
+      <AboutMeSection />
+      <SkillsSection />
     </div>
   );
 };

@@ -3,3 +3,4 @@ export type { IconName } from './Icon';
 export { Button } from './Button';
 export { ButtonMenu } from './ButtonMenu';
 export { Select } from './Select';
+export { Typewriter } from './Typewriter';

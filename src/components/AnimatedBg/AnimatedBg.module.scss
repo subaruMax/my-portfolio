@@ -1,0 +1,38 @@
+@use '@styles/media';
+
+.root {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+
+.bg {
+  animation: animate 3s linear alternate-reverse infinite;
+  background: linear-gradient(
+    190deg,
+    var(--special-color) 0%,
+    var(--special-bg-color) 20%,
+    var(--dark-color) 40%,
+    var(--outline-color) 100%
+  );
+  background-attachment: fixed;
+  background-size: 200vw 400vh;
+  mask-image: url('/media/bg.svg');
+  mask-size: 2000px;
+  opacity: 0.3;
+  width: 140vw;
+  height: 140vh;
+
+  @include media.tablet-landscape {
+    mask-size: 100vw;
+  }
+}
+
+@keyframes animate {
+  100% {
+    background-position: 50% 100%;
+  }
+}
