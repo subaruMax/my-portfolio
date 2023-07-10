@@ -27,9 +27,9 @@ export const AboutMeSection = () => {
 
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
-  const textX = useTransform(scrollYProgress, [0, 1], ['0%', '-25%']);
+  const textX = useTransform(scrollYProgress, [0, 1], ['0%', '-35%']);
 
-  const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
+  const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '55%']);
 
   const handleStartTyping = (key: keyof typeof typing) => {
     setTyping(prev => ({ ...prev, [key]: true }));

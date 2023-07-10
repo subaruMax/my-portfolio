@@ -19,7 +19,7 @@
 
   @include media.tablet-landscape {
     max-width: 600px;
-    left: 20%;
+    left: 15%;
     top: 25%;
     gap: 32px;
   }
@@ -48,7 +48,7 @@
   bottom: -30%;
   position: absolute;
   @include media.tablet-landscape {
-    left: 57%;
+    left: 52%;
     bottom: unset;
   }
 }
