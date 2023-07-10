@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 140 140">
+  <defs>
+    <path id="reuse-0" fill="#000" d="M70 130a60 60 0 1 0 0-120 60 60 0 0 0 0 120Z"/>
+  </defs>
+  <mask id="a" width="120" height="120" x="10" y="10" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <use xlink:href="#reuse-0"/>
+  </mask>
+  <g mask="url(#a)">
+    <use xlink:href="#reuse-0"/>
+    <path fill="url(#b)" d="M109.67 115.01 56.1 46H46v47.98h8.08V56.26l49.25 63.64a60.24 60.24 0 0 0 6.34-4.89Z"/>
+    <path fill="url(#c)" d="M94.67 46h-8v48h8V46Z"/>
+  </g>
+  <defs>
+    <linearGradient id="b" x1="82.67" x2="106.33" y1="87.67" y2="117" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="c" x1="90.67" x2="90.53" y1="46" y2="81.25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

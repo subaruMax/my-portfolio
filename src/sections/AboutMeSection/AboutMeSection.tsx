@@ -29,7 +29,7 @@ export const AboutMeSection = () => {
 
   const textX = useTransform(scrollYProgress, [0, 1], ['0%', '-35%']);
 
-  const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '55%']);
+  const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '35%']);
 
   const handleStartTyping = (key: keyof typeof typing) => {
     setTyping(prev => ({ ...prev, [key]: true }));
