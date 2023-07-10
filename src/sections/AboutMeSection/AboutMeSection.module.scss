@@ -7,17 +7,10 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  padding-top: 35%;
+  padding-top: 120px;
+  min-height: 500px;
+}
 
-  @include media.tablet-landscape {
-    padding-top: 180px;
-  }
-}
-.test {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-}
 .text {
   display: flex;
   flex-direction: column;
@@ -27,7 +20,7 @@
   @include media.tablet-landscape {
     max-width: 600px;
     left: 20%;
-    top: 18%;
+    top: 25%;
     gap: 32px;
   }
 }

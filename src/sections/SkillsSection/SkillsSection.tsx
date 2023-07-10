@@ -10,22 +10,21 @@ export const SkillsSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['end end', 'start start']
+    offset: ['-0.9', '0.6']
   });
 
   const textX = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.8, 1],
-    ['-100%', '0%', '0%', '100%']
+    [0, 0.3, 0.6, 1],
+    ['-60%', '0%', '0%', '60%']
   );
 
   return (
-    <motion.section className={s.root}>
-      <div className={s.wrapper} ref={ref} />
+    <section className={s.root} ref={ref}>
       <motion.div style={{ x: textX }}>
         <h1 className={s.title}>SKILLS</h1>
       </motion.div>
       <div className={s.divider} />
-    </motion.section>
+    </section>
   );
 };

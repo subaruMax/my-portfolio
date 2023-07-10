@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import useThemeContext from '@app/context/themeContext';
 import { Typewriter } from '@app/components/ui-kit';
 
 import s from './AboutMeSection.module.scss';
-import useThemeContext from '@app/context/themeContext';
 
 export const AboutMeSection = () => {
   const { theme } = useThemeContext();
@@ -16,7 +16,7 @@ export const AboutMeSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['end end', 'start start']
+    offset: ['0', '0.9']
   });
   const [typing, setTyping] = useState({
     title: true,
@@ -25,19 +25,18 @@ export const AboutMeSection = () => {
     p3: false
   });
 
-  const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
-  const textX = useTransform(scrollYProgress, [0.8, 1], ['0%', '-25%']);
+  const textX = useTransform(scrollYProgress, [0, 1], ['0%', '-25%']);
 
-  const planetX = useTransform(scrollYProgress, [0.8, 1], ['0%', '25%']);
+  const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
 
   const handleStartTyping = (key: keyof typeof typing) => {
     setTyping(prev => ({ ...prev, [key]: true }));
   };
 
   return (
-    <section className={s.root}>
-      <div className={s.test} ref={ref}></div>
+    <section className={s.root} ref={ref}>
       <motion.div className={s.planet} style={{ x: planetX, opacity }}>
         <Image
           src={`/media/globe-${theme}.svg`}
@@ -47,8 +46,7 @@ export const AboutMeSection = () => {
           className={s.planetImage}
         />
       </motion.div>
-
-      <motion.div className={s.text} style={{ x: textX, opacity }} ref={ref}>
+      <motion.div className={s.text} style={{ x: textX, opacity }}>
         <Typewriter
           interval={80}
           className={s.title}
