@@ -1,0 +1,49 @@
+@import '@styles/typography';
+
+.root {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+  gap: 4px;
+  flex-direction: column;
+
+  &:hover {
+    .image {
+      filter: drop-shadow(0 0 5px var(--special-color));
+    }
+
+    .text {
+      color: var(--bg-color);
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.image {
+  transition: filter 0.3s ease-out;
+  filter: drop-shadow(0 0 1px var(--text-color));
+}
+
+.text {
+  @include paragraph1;
+  transition: color 0.3s ease-out;
+  position: relative;
+  color: var(--text-color);
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--special-color);
+    transform: scale(2);
+    transition: all 0.3s ease-out;
+    opacity: 0;
+  }
+}

@@ -3,21 +3,31 @@
 @import '@styles/mixins';
 
 .root {
-  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-top: 80px;
   background-color: var(--bg-color);
+  padding-bottom: 160px;
 }
 
 .title {
   @include heading1;
   text-transform: uppercase;
   text-align: center;
+  color: var(--text-color);
 }
 
 .divider {
   border-bottom: 3px solid var(--border-color);
+  width: 100%;
+}
+
+.subSection {
+  @include side-paddings;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 160px;
 }
