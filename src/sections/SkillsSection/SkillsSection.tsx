@@ -1,24 +1,17 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
-import s from './SkillsSection.module.scss';
 import { SkillsTable } from '@app/components/SkillsTable';
 import {
   FRAMEWORKS,
   PROGRAMMING_LANGUAGES,
   TECHNOLOGIES_LIBRARIES
 } from '@app/constants/skills';
-import { useTranslations } from 'next-intl';
 
-const sectionAppear = {
-  visible: { opacity: 1, y: 0, transition: { type: 'tween' } },
-  hidden: { opacity: 0, y: 300, transition: { type: 'tween' } }
-};
-
-const viewport = { amount: 0.15, once: true };
+import s from './SkillsSection.module.scss';
 
 export const SkillsSection = () => {
   const ref = useRef(null);
@@ -43,25 +36,30 @@ export const SkillsSection = () => {
     target: ref,
     offset: ['-0.3', '0.3']
   });
-  const titleX = useTransform(scrollYProgress, [0, 0.3], ['-100%', '0%']);
+  const titleX = useTransform(scrollYProgress, [0, 0.3], ['-30%', '0%']);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const dashesHeight = useTransform(
+    scrollYProgress,
+    [0.2, 0.95],
+    ['0%', '100%']
+  );
 
   return (
     <section className={s.root} ref={ref}>
-      <motion.h1 className={s.title} style={{ x: titleX }}>
+      <motion.h1
+        className={s.title}
+        style={{ x: titleX, opacity: titleOpacity }}
+      >
         / {t('title')} /
       </motion.h1>
       <div className={s.divider} />
       {SUB_SECTIONS.map(({ title, items }) => (
-        <motion.div
+        <SkillsTable
+          title={title}
+          items={items}
           className={s.subSection}
-          variants={sectionAppear}
-          whileInView={'visible'}
-          initial="hidden"
-          viewport={viewport}
           key={title}
-        >
-          <SkillsTable title={title} items={items} />
-        </motion.div>
+        />
       ))}
     </section>
   );
