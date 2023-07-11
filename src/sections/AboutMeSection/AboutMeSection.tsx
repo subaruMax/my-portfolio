@@ -69,6 +69,13 @@ export const AboutMeSection = () => {
           <Typewriter interval={10} start={typing.p3} text={t('p3')} />
         </div>
       </motion.div>
+      <Image
+        src="/media/rec.png"
+        width={2000}
+        height={1000}
+        className={s.image}
+        alt="decorations"
+      />
     </section>
   );
 };
