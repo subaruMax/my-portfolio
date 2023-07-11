@@ -5,6 +5,7 @@ import { METADATA } from '@app/constants/ metadata';
 
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
+import { Footer } from '@app/components/Footer';
 
 type LocaleLayoutProps = {
   children: ReactNode;
@@ -43,6 +44,7 @@ const LocaleLayout = async ({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Header />
       {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 };

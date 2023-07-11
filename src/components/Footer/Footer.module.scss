@@ -1,0 +1,17 @@
+@use '@styles/media';
+@import '@styles/typography';
+@import '@styles/mixins';
+
+.root {
+  @include side-paddings;
+  background-color: var(--bg-color);
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 200px;
+  justify-content: flex-end;
+  border-top: 2px solid var(--border-color);
+  color: var(--text-color);
+}
