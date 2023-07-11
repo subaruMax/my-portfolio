@@ -31,6 +31,8 @@ export const AboutMeSection = () => {
 
   const planetX = useTransform(scrollYProgress, [0, 1], ['0%', '35%']);
 
+  const screenY = useTransform(scrollYProgress, [0, 1], ['0%', '80%']);
+
   const handleStartTyping = (key: keyof typeof typing) => {
     setTyping(prev => ({ ...prev, [key]: true }));
   };
@@ -69,13 +71,7 @@ export const AboutMeSection = () => {
           <Typewriter interval={10} start={typing.p3} text={t('p3')} />
         </div>
       </motion.div>
-      <Image
-        src="/media/rec.png"
-        width={2000}
-        height={1000}
-        className={s.image}
-        alt="decorations"
-      />
+      <motion.div style={{ y: screenY }} className={s.gradient} />
     </section>
   );
 };

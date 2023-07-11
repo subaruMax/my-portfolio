@@ -16,6 +16,7 @@
   --special-mark-color: rgba(224, 222, 228, 0.08);
   --light-color: rgba(216, 207, 239, 1);
   --dark-color: rgba(55, 50, 69, 1);
+  --additional-bg-color: rgba(5, 26, 218, 0.3);
 }
 
 [data-theme='light'] {
@@ -36,4 +37,5 @@
   --special-mark-color: rgba(255, 255, 255, 0.08);
   --light-color: rgba(237, 244, 255, 1);
   --dark-color: #3f83d1;
+  --additional-bg-color: rgba(0, 68, 255, 0.5);
 }

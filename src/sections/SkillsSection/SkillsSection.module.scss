@@ -9,6 +9,7 @@
   overflow: hidden;
   background-color: var(--bg-color);
   padding-bottom: 120px;
+  padding-top: 80px;
   border-bottom: 2px solid var(--border-color);
   border-top: 2px solid var(--border-color);
 }
@@ -18,11 +19,6 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--text-color);
-}
-
-.divider {
-  border-bottom: 1px solid var(--border-color);
-  width: 100%;
 }
 
 .subSection {
