@@ -36,13 +36,8 @@ export const SkillsSection = () => {
     target: ref,
     offset: ['-0.3', '0.3']
   });
-  const titleX = useTransform(scrollYProgress, [0, 0.3], ['-30%', '0%']);
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-  const dashesHeight = useTransform(
-    scrollYProgress,
-    [0.2, 0.95],
-    ['0%', '100%']
-  );
+  const titleX = useTransform(scrollYProgress, [0, 0.4], ['-30%', '0%']);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   return (
     <section className={s.root} ref={ref}>
@@ -52,7 +47,6 @@ export const SkillsSection = () => {
       >
         / {t('title')} /
       </motion.h1>
-      <div className={s.divider} />
       {SUB_SECTIONS.map(({ title, items }) => (
         <SkillsTable
           title={title}

@@ -5,11 +5,11 @@ import s from './Page.module.scss';
 
 const Home = () => {
   return (
-    <div className={s.root}>
+    <main className={s.root}>
       <AnimatedBg />
       <AboutMeSection />
       <SkillsSection />
-    </div>
+    </main>
   );
 };
 

@@ -18,8 +18,8 @@ const tableAppear = {
     y: 0,
     transition: {
       type: 'tween',
-      delayChildren: 0.3,
-      staggerChildren: 0.1
+      delayChildren: 0.4,
+      staggerChildren: 0.2
     }
   },
   hidden: { opacity: 0, y: 300, transition: { type: 'tween' } }
@@ -33,7 +33,7 @@ const item = {
   }
 };
 
-const viewport = { amount: 0.4, once: true };
+const viewport = { amount: 0.3, once: true };
 
 export const SkillsTable: React.FC<SkillsTableProps> = ({
   title,
