@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
-import React, { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { SkillsTable } from '@app/components/SkillsTable';
@@ -12,21 +12,16 @@ import {
 } from '@app/constants/skills';
 
 import useNavContext from '@app/context/navContext';
+import { NAVIGATION } from '@app/constants/navigation';
+import { useChangeSection } from '@app/hooks';
 
 import s from './SkillsSection.module.scss';
-import { NAVIGATION } from '@app/constants/navigation';
 
 export const SkillsSection = () => {
   const ref = useRef(null);
   const t = useTranslations('Skills');
-  const { setCurrentSection } = useNavContext();
-  const isInView = useInView(ref, { amount: 0.2 });
 
-  useEffect(() => {
-    if (isInView) {
-      setCurrentSection(NAVIGATION[1].id);
-    }
-  }, [isInView, setCurrentSection]);
+  useChangeSection(ref, NAVIGATION[1].id, 0.2);
 
   const SUB_SECTIONS = [
     {
@@ -56,7 +51,7 @@ export const SkillsSection = () => {
         className={s.title}
         style={{ x: titleX, opacity: titleOpacity }}
       >
-        / {t('title')} /
+        {t('title')}
       </motion.h1>
       {SUB_SECTIONS.map(({ title, items }) => (
         <SkillsTable

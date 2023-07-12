@@ -20,5 +20,11 @@
     "languages": "Мови програмування",
     "frameworks": " Фреймворки",
     "technologies": "Технології та бібліотеки"
+  },
+  "Portfolio": {
+    "title": "Портфоліо"
+  },
+  "Contacts": {
+    "title": "Контакти"
   }
 }
