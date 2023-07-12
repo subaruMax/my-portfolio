@@ -1,36 +1,34 @@
 import React, { ReactNode } from 'react';
 import cn from 'classnames';
 
+import useNavContext from '@app/context/navContext';
+
 import s from './NavLink.module.scss';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 type NavLinkProps = {
   children: ReactNode;
-  href: string;
+  id: string;
   className?: string;
   onClick: () => void;
 };
 
 export const NavLink: React.FC<NavLinkProps> = ({
   children,
-  href,
+  id,
   className,
   onClick
 }) => {
-  const { push } = useRouter();
-  const searchParams = useSearchParams();
-  const activePage = searchParams.get('section');
-
+  const { currentSection, scrollToSection } = useNavContext();
   const handleClick = () => {
     onClick();
-    push(href);
+    scrollToSection(id);
   };
 
   return (
     <button
       className={cn(
         s.root,
-        { [s.active]: Boolean(activePage && href.includes(activePage)) },
+        { [s.active]: currentSection.includes(id) },
         className
       )}
       onClick={handleClick}

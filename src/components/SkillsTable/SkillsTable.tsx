@@ -33,7 +33,7 @@ const item = {
   }
 };
 
-const viewport = { amount: 0.3, once: true };
+const viewport = { amount: 0.15, once: true };
 
 export const SkillsTable: React.FC<SkillsTableProps> = ({
   title,

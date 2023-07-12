@@ -22,7 +22,7 @@
   transform-origin: center;
 
   @include media.tablet-landscape {
-    top: 30px;
+    top: 0;
     max-height: 70px;
   }
 }

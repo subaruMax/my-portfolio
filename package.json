@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-icons && next dev",
+    "dev": "npm run generate-icons && npm run open-browser && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "npm run lint -- --fix",
-    "generate-icons": "[ ! -f \"./scripts/generateIcons.js\" ] || node scripts/generateIcons.js"
+    "lint-fix": "npm run lint --fix",
+    "stylelint": "npx stylelint  --fix \"**/*.{css,scss,sass}\"",
+    "generate-icons": "[ ! -f \"./scripts/generateIcons.js\" ] || node scripts/generateIcons.js",
+    "open-browser": "opener http://localhost:3000"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",

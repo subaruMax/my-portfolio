@@ -29,7 +29,13 @@
   transform: translate(0, -50%);
   width: 105%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%,  var(--border-color) 5%, var(--border-color) 95%,  transparent 100%)
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-color) 5%,
+    var(--border-color) 95%,
+    transparent 100%
+  );
 }
 
 .logo {
