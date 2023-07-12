@@ -1,1 +1,1 @@
-export { PortfolioSection } from './PortfolioSection';
+export { ContactsSection } from './ContactsSection';
