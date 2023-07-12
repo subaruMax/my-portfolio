@@ -79,6 +79,7 @@
   transition: border-color 0.3s ease-out;
   background-color: var(--subtle-color);
 }
+
 .leftArrow {
   left: 0;
   transform: translate(-5px, -50%) rotate(45deg);
@@ -97,6 +98,7 @@
   0% {
     filter: blur(4px);
   }
+
   50% {
     transform: translate(10%, 85%);
   }

@@ -6,6 +6,7 @@ import { startTransition } from 'react';
 
 import { i18n } from '@app/constants/localization';
 import { Select } from '@ui-kit';
+import useNavContext from '@app/context/navContext';
 
 type LocaleSwitcherProps = {
   className?: string;
@@ -20,11 +21,14 @@ const LOCALE_OPTIONS = Object.entries(i18n.locales).map(lang => ({
 export const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({
   className
 }) => {
+  const { setCurrentWindowY } = useNavContext();
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
   function onLanguageChange(locale: string) {
+    setCurrentWindowY(window.scrollY);
+
     if (!pathname) return '/';
 
     const segments = pathname.split('/');

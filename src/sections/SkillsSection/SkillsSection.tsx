@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { SkillsTable } from '@app/components/SkillsTable';
@@ -11,11 +11,22 @@ import {
   TECHNOLOGIES_LIBRARIES
 } from '@app/constants/skills';
 
+import useNavContext from '@app/context/navContext';
+
 import s from './SkillsSection.module.scss';
+import { NAVIGATION } from '@app/constants/navigation';
 
 export const SkillsSection = () => {
   const ref = useRef(null);
   const t = useTranslations('Skills');
+  const { setCurrentSection } = useNavContext();
+  const isInView = useInView(ref, { amount: 0.2 });
+
+  useEffect(() => {
+    if (isInView) {
+      setCurrentSection(NAVIGATION[1].id);
+    }
+  }, [isInView, setCurrentSection]);
 
   const SUB_SECTIONS = [
     {
@@ -40,7 +51,7 @@ export const SkillsSection = () => {
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   return (
-    <section className={s.root} ref={ref}>
+    <section className={s.root} ref={ref} id={NAVIGATION[1].id}>
       <motion.h1
         className={s.title}
         style={{ x: titleX, opacity: titleOpacity }}

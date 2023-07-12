@@ -123,7 +123,7 @@ export const NavMobile: React.FC<NavMobileProps> = ({}) => {
               {NAVIGATION.sort((a, b) => a.index - b.index).map(link => (
                 <NavLink
                   onClick={toggleMenu}
-                  href={link.href}
+                  id={link.id}
                   className={s.menuItem}
                   key={link.value}
                 >

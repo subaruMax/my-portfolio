@@ -1,14 +1,15 @@
-@import "@styles/typography";
+@import '@styles/typography';
 
 .root {
   @include paragraph1;
   position: relative;
   min-width: 50px;
+
   &:hover {
     .currentValue {
       border: 1px solid var(--special-color);
       background: var(--special-mark-color);
-      box-shadow: 0px 0px 5px 0px var(--special-bg-color);
+      box-shadow: 0 0 5px 0 var(--special-bg-color);
     }
   }
 }
@@ -18,8 +19,9 @@
   .options {
     border: 1px solid var(--special-color);
     background: var(--subtle-color);
-    box-shadow: 0px 0px 5px 0px var(--special-bg-color);
+    box-shadow: 0 0 5px 0 var(--special-bg-color);
   }
+
   .dropdownIcon {
     color: var(--special-color);
     filter: drop-shadow(0 0 3px var(--special-bg-color));
@@ -62,7 +64,7 @@
 
 .options {
   display: flex;
-  padding: 8px 0px;
+  padding: 8px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
