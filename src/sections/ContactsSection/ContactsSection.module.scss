@@ -1,0 +1,21 @@
+@use '@styles/media';
+@import '@styles/typography';
+@import '@styles/mixins';
+
+.root {
+  @include side-paddings;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  min-height: 500px;
+  background-color: var(--bg-color);
+}
+
+
+.title {
+  @include heading1;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+}

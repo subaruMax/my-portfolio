@@ -1,23 +1,24 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 import useThemeContext from '@app/context/themeContext';
 import { Typewriter } from '@app/components/ui-kit';
-import useNavContext from '@app/context/navContext';
 import { NAVIGATION } from '@app/constants/navigation';
+import { useChangeSection } from '@app/hooks';
 
 import s from './AboutMeSection.module.scss';
 
 export const AboutMeSection = () => {
   const { theme } = useThemeContext();
-  const { setCurrentSection } = useNavContext();
   const t = useTranslations('AboutMe');
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
+
+  useChangeSection(ref, NAVIGATION[0].id);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['0', '0.9']
@@ -40,12 +41,6 @@ export const AboutMeSection = () => {
   const handleStartTyping = (key: keyof typeof typing) => {
     setTyping(prev => ({ ...prev, [key]: true }));
   };
-
-  useEffect(() => {
-    if (isInView) {
-      setCurrentSection(NAVIGATION[0].id);
-    }
-  }, [isInView, setCurrentSection]);
 
   return (
     <section className={s.root} ref={ref} id={NAVIGATION[0].id}>

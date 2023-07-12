@@ -20,5 +20,11 @@
     "languages": "Programming Languages",
     "frameworks": "Frameworks",
     "technologies": "Technologies & Libraries"
+  },
+  "Portfolio": {
+    "title": "Portfolio"
+  },
+  "Contacts": {
+    "title": "Contacts"
   }
 }
