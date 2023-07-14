@@ -49,6 +49,7 @@ export const AboutMeSection = () => {
           src={`/media/globe-${theme}.svg`}
           width={800}
           height={800}
+          priority
           alt="planet"
           className={s.planetImage}
         />
