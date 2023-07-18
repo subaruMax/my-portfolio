@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 
 import { PROJECTS } from './projects';
@@ -10,41 +9,12 @@ import s from './ProjectsWithPagination.module.scss';
 
 const PROJECTS_PER_PAGE = 6;
 
-const animation = {
-  visible: {
-    x: '0%',
-    opacity: 1,
-    transition: {
-      type: 'tween'
-    }
-  },
-  hidden: {
-    x: '-30%',
-    opacity: 0,
-    transition: {
-      type: 'tween'
-    }
-  }
-};
-
-const viewport = {
-  amount: 0.1,
-  once: false
-};
-
 export const ProjectsWithPagination = () => {
   const [page, setPage] = useState(0);
   const [selectedCardId, setSelectedCardId] = useState('');
 
   return (
-    <motion.div
-      className={s.root}
-      variants={animation}
-      whileInView="visible"
-      initial="hidden"
-      viewport={viewport}
-      layout
-    >
+    <div className={s.root}>
       <ProjectsOverlay
         isActive={Boolean(selectedCardId)}
         onClose={() => setSelectedCardId('')}
@@ -62,6 +32,6 @@ export const ProjectsWithPagination = () => {
         projects={PROJECTS}
         onCardSelect={setSelectedCardId}
       />
-    </motion.div>
+    </div>
   );
 };
