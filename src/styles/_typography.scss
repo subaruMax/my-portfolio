@@ -70,6 +70,19 @@
   @include heading6;
 }
 
+@mixin heading7 {
+  font-family: var(--font-play);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  line-height: 20px
+}
+
+%heading7 {
+  @include heading7;
+}
+
 @mixin button {
   font-family: var(--font-play);
   font-size: 14px;
@@ -86,10 +99,9 @@
 @mixin paragraph1 {
   font-family: var(--font-play);
   font-size: 16px;
-  line-height: 30px;
+  line-height: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 %paragraph1 {
