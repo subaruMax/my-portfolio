@@ -1,0 +1,80 @@
+@import '@styles/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px;
+  gap: 42px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.url {
+  cursor: pointer;
+  transition: text-shadow 0.3s ease-out;
+  width: fit-content;
+
+  &:hover {
+    text-shadow: 0 0 9px var(--special-bg-color);
+  }
+}
+
+.section {
+  @include paragraph1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.sectionHead {
+  @include heading7;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  filter: drop-shadow(0 0 2px var(--outline-color));
+
+  svg {
+    filter: drop-shadow(0 0 5px var(--special-bg-color));
+  }
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+
+  > div {
+    border: 1px solid var(--special-bg-color);
+    background-color: var(--bg-color);
+    padding: 0px 12px;
+    border-radius: 4px;
+    position: relative;
+
+    &::before {
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 1px;
+      width: calc((100% + 20px));
+      border-top: 20px solid var(--special-bg-color);
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:first-child::before {
+      left: 0;
+      transform: translate(10px, -50%);
+      width: 100%;
+    }
+
+    &:last-child::before {
+      left: 0;
+      transform: translate(-10px, -50%);
+      width: 100%;
+    }
+  }
+}

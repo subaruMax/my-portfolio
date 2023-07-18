@@ -1,76 +1,67 @@
-'use client';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 
-import React, { useMemo, useState } from 'react';
-import cn from 'classnames';
-
-import { ProjectCard } from '@app/components/ProjectCard';
 import { PROJECTS } from './projects';
+import { ProjectsOverlay } from './ProjectsOverlay/ProjectsOverlay';
+import { ProjectsPagination } from './ProjectsPagination';
+import { ProjectsGrid } from './ProjectsGrid';
 
 import s from './ProjectsWithPagination.module.scss';
-import { AnimatePresence, motion } from 'framer-motion';
 
 const PROJECTS_PER_PAGE = 6;
 
-const rootAnimation = {
+const animation = {
   visible: {
-    opacity: 1,
     x: '0%',
+    opacity: 1,
     transition: {
-      type: 'tween',
-      duration: 0.3,
-      delay: 0.3
+      type: 'tween'
     }
   },
   hidden: {
+    x: '-30%',
     opacity: 0,
-    x: '-30%'
+    transition: {
+      type: 'tween'
+    }
   }
 };
 
-const rootViewport = { amount: 0.1, once: true };
+const viewport = {
+  amount: 0.1,
+  once: false
+};
 
 export const ProjectsWithPagination = () => {
   const [page, setPage] = useState(0);
-
-  const numOfPages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
-  const offset = useMemo(() => page * PROJECTS_PER_PAGE, [page]);
+  const [selectedCardId, setSelectedCardId] = useState('');
 
   return (
     <motion.div
       className={s.root}
-      whileInView={'visible'}
+      variants={animation}
+      whileInView="visible"
       initial="hidden"
-      variants={rootAnimation}
-      viewport={rootViewport}
+      viewport={viewport}
+      layout
     >
-      <div className={s.pagination}>
-        {new Array(numOfPages).fill(null).map((el, i) => (
-          <div
-            key={i}
-            className={cn(s.bullet, { [s.active]: i === page })}
-            onClick={() => setPage(i)}
-          >
-            {i + 1}
-          </div>
-        ))}
-      </div>
-      <div className={s.projects}>
-        <AnimatePresence mode="popLayout" initial={false}>
-          {PROJECTS.slice(offset, offset + PROJECTS_PER_PAGE).map(
-            (project, i) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: -25 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 80 }}
-                transition={{ type: 'tween', duration: 0.3, delay: i * 0.15 }}
-              >
-                <ProjectCard {...project} onClick={() => {}} />
-              </motion.div>
-            )
-          )}
-        </AnimatePresence>
-      </div>
+      <ProjectsOverlay
+        isActive={Boolean(selectedCardId)}
+        onClose={() => setSelectedCardId('')}
+      />
+      <ProjectsPagination
+        pageNumber={page}
+        projectsLength={PROJECTS.length}
+        perPage={PROJECTS_PER_PAGE}
+        setPage={setPage}
+      />
+      <ProjectsGrid
+        selectedCardId={selectedCardId}
+        pageNumber={page}
+        perPage={PROJECTS_PER_PAGE}
+        projects={PROJECTS}
+        onCardSelect={setSelectedCardId}
+      />
     </motion.div>
   );
 };

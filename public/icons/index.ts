@@ -3,19 +3,27 @@
 // this file is used to generate icon names from files within this directory
 // icons are used in Icon component
 
-import battery from './battery.svg';
+import close from './close.svg';
+import description from './description.svg';
 import dropdown from './dropdown.svg';
 import flagGb from './flag-gb.svg';
 import flagUa from './flag-ua.svg';
+import fullscreen from './fullscreen.svg';
+import gear from './gear.svg';
 import moon from './moon.svg';
+import planet from './planet.svg';
 import sun from './sun.svg';
 
 const icons = {
-  'battery': battery,
+  'close': close,
+  'description': description,
   'dropdown': dropdown,
   'flag-gb': flagGb,
   'flag-ua': flagUa,
+  'fullscreen': fullscreen,
+  'gear': gear,
   'moon': moon,
+  'planet': planet,
   'sun': sun,
 };
 
