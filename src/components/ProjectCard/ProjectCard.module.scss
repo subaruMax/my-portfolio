@@ -13,6 +13,7 @@
   height: 100%;
   perspective: 700px;
   transform-style: preserve-3d;
+  will-change: transform;
   &:hover:not(.opened) {
     .front {
       transform: rotateY(-180deg);
@@ -120,7 +121,7 @@
   right: 0;
   margin: auto;
   width: calc(100% - 12px);
-  height: calc(100% - 24px);
+  height: calc(100% - 30px);
   z-index: 999;
   transform-style: flat;
   border: 1px solid var(--special-bg-color);
