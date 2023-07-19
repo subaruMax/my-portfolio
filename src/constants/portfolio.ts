@@ -23,6 +23,7 @@ export const PROJECTS = [
     jobDone:
       'Developing of Frontend and Backend parts from scratch. API, Email, Google Analytics integrations.',
     teamSize: 2,
+    href: null,
     technologies: ['Next.js', 'Strapi']
   },
   {

@@ -5,7 +5,7 @@ import { Icon } from '@ui-kit';
 import s from './FullContent.module.scss';
 
 type FullContentProps = {
-  href: string;
+  href: string | null;
   description: string;
   jobDone: string;
   technologies: string[];

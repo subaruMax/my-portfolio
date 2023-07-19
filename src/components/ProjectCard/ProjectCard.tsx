@@ -12,7 +12,7 @@ type ProjectCardProps = {
   title: string;
   image: string;
   shortDescription: string;
-  href: string;
+  href: string | null;
   description: string;
   technologies: string[];
   jobDone: string;
