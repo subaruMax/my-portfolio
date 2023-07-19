@@ -15,9 +15,13 @@ type ProjectCardProps = {
   href: string;
   description: string;
   technologies: string[];
+  jobDone: string;
+  teamSize: number;
+  company: string;
   isOpened: boolean;
   className?: string;
   onClick: (id: string) => void;
+  onImageLoad: (id: string) => void;
 };
 
 export const openSpring = { type: 'spring', stiffness: 200, damping: 30 };
@@ -25,14 +29,18 @@ export const closeSpring = { type: 'spring', stiffness: 300, damping: 35 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  company,
   image,
   shortDescription,
   href,
   description,
+  jobDone,
+  teamSize,
   technologies,
   isOpened,
   className,
-  onClick
+  onClick,
+  onImageLoad
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -54,12 +62,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         <div className={s.front} ref={ref}>
           <div className={s.glass} />
-          <div className={s.title}>{title}</div>
+          <div className={s.title}>
+            <div className={s.projectTitle}>{title}</div>
+            <div className={s.companyEmployed}>at - {company}</div>
+          </div>
           <Image
             src={image}
             width={1200}
             height={700}
+            quality={100}
             alt={title}
+            onLoadingComplete={() => onImageLoad(title)}
             className={s.image}
           />
 
@@ -70,13 +83,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               href={href}
               description={description}
               technologies={technologies}
+              jobDone={jobDone}
+              teamSize={teamSize}
             />
           )}
         </div>
 
         <div className={s.back}>
           <div className={s.glass} />
-          <div className={s.backContent}>{shortDescription}di</div>
+          <div className={s.backContent}>{shortDescription}</div>
           <div className={s.backScreen} />
         </div>
       </motion.div>

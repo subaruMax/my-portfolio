@@ -25,9 +25,11 @@
 .section {
   @include paragraph1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 16px;
-  max-width: 800px;
+  max-width: 740px;
+  align-items: flex-start;
 }
 
 .sectionHead {
@@ -35,10 +37,11 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  filter: drop-shadow(0 0 2px var(--outline-color));
+  word-wrap: nowrap;
+  filter: drop-shadow(0 0 1px var(--outline-color));
 
   svg {
-    filter: drop-shadow(0 0 5px var(--special-bg-color));
+    filter: drop-shadow(0 0 4px var(--special-bg-color));
   }
 }
 
