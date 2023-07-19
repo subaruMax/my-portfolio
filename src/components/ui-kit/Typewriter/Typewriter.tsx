@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import s from './Typewriter.module.scss';
@@ -11,64 +11,54 @@ type TypewriterProps = {
   onComplete?: () => void;
 };
 
-export const Typewriter: React.FC<TypewriterProps> = ({
-  text,
-  start = true,
-  interval = 100,
-  className,
-  onComplete
-}) => {
-  const [result, setResult] = useState('');
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [currentI, setCurrentI] = useState(0);
-  const chars = text.split('');
+export const Typewriter: React.FC<TypewriterProps> = React.memo(
+  ({ text, start = true, interval = 100, className, onComplete }) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const chars = text.split('');
+    const [isCompleted, setIsCompleted] = useState(false);
 
-  useEffect(() => {
-    const type = () => {
-      if (result.length !== text.length) {
-        setResult(result + chars[currentI]);
-        setCurrentI(currentI + 1);
-      } else {
-        setIsCompleted(true);
-        onComplete?.();
+    useEffect(() => {
+      let currentI = 0;
+      const type = () => {
+        const result = ref.current?.textContent;
+
+        if (!ref.current) {
+          return;
+        }
+
+        if (result?.length !== text.length) {
+          ref.current.textContent = ref.current?.textContent + chars[currentI];
+          currentI = currentI + 1;
+        } else {
+          setIsCompleted(true);
+          onComplete?.();
+        }
+      };
+
+      let intervalId: NodeJS.Timer | undefined = undefined;
+
+      if (start) {
+        intervalId = setInterval(type, interval);
       }
-    };
 
-    let intervalId: NodeJS.Timer | undefined = undefined;
+      if (isCompleted) {
+        clearInterval(intervalId);
+      }
 
-    if (start) {
-      intervalId = setInterval(type, interval);
-    }
+      return () => clearInterval(intervalId);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isCompleted, start]);
 
-    if (isCompleted) {
-      clearInterval(intervalId);
-    }
-
-    return () => clearInterval(intervalId);
-  }, [
-    chars,
-    currentI,
-    interval,
-    isCompleted,
-    onComplete,
-    result,
-    start,
-    text.length
-  ]);
-
-  return (
-    <div className={className}>
-      {result.length < text.length && (
-        <span className={cn(s.bracket, s.left, { [s.hidden]: !start })}>
-          &#91;
-        </span>
-      )}
-      {result}
-      {result.length < text.length && (
-        <span className={cn(s.bracket, s.right, { [s.hidden]: !start })}>
-          &#93;
-        </span>
-      )}
-    </div>
-  );
-};
+    return (
+      <div className={cn(s.root, className)}>
+        {start && !isCompleted && (
+          <span className={cn(s.bracket, s.left)}></span>
+        )}
+        <div ref={ref}>{ref.current?.textContent}</div>
+        {start && !isCompleted && (
+          <span className={cn(s.bracket, s.right)}></span>
+        )}
+      </div>
+    );
+  }
+);

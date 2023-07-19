@@ -56,25 +56,25 @@ export const AboutMeSection = () => {
       </motion.div>
       <motion.div className={s.text} style={{ x: textX, opacity }}>
         <Typewriter
-          interval={80}
+          interval={60}
           className={s.title}
           text={t('title')}
           onComplete={() => handleStartTyping('p1')}
         />
         <div className={s.description}>
           <Typewriter
-            interval={10}
+            interval={15}
             text={t('p1')}
             start={typing.p1}
             onComplete={() => handleStartTyping('p2')}
           />
           <Typewriter
-            interval={10}
+            interval={15}
             text={t('p2')}
             start={typing.p2}
             onComplete={() => handleStartTyping('p3')}
           />
-          <Typewriter interval={10} start={typing.p3} text={t('p3')} />
+          <Typewriter interval={15} start={typing.p3} text={t('p3')} />
         </div>
       </motion.div>
       <motion.div style={{ y: screenY }} className={s.gradient} />
