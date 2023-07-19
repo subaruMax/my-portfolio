@@ -50,7 +50,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <motion.div
         layout
         className={cn(s.card, { [s.opened]: isOpened })}
-        transition={{ type: 'tween' }}
+        transition={{ type: 'tween', duration: 0.3 }}
       >
         <div className={s.front} ref={ref}>
           <div className={s.glass} />

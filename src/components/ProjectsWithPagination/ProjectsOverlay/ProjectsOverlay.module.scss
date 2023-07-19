@@ -19,7 +19,7 @@
   right: 15px;
   top: 10px;
   background-color: var(--special-mark-color);
-  color: var(--special-text-color);
+  color: var(--text-color);
   border: 1px solid var(--special-bg-color);
   width: 40px;
   height: 40px;
@@ -28,7 +28,6 @@
 
 
   &:hover {
-    background-color: var(--dark-color);
     box-shadow: 0 0 1px 3px var(--special-bg-color);
   }
 }

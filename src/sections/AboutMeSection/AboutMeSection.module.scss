@@ -4,11 +4,12 @@
 
 .root {
   @include side-paddings;
-  height: 100vh;
+  padding-bottom: 20px;
   position: relative;
   overflow: hidden;
-  padding-top: 120px;
-  min-height: 500px;
+  padding-top: 100px;
+  min-height: 800px;
+  height: 100vh;
 }
 
 .text {
@@ -20,7 +21,7 @@
   @include media.tablet-landscape {
     max-width: 600px;
     left: 15%;
-    top: 25%;
+    top: 20%;
     gap: 32px;
   }
 }
@@ -37,10 +38,12 @@
 
 .description {
   @include paragraph1;
+  line-height: 26px;
   display: flex;
   flex-direction: column;
   gap: 18px;
   text-transform: uppercase;
+
 }
 
 .planet {
