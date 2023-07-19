@@ -4,6 +4,7 @@
 // icons are used in Icon component
 
 import close from './close.svg';
+import code from './code.svg';
 import description from './description.svg';
 import dropdown from './dropdown.svg';
 import flagGb from './flag-gb.svg';
@@ -13,9 +14,11 @@ import gear from './gear.svg';
 import moon from './moon.svg';
 import planet from './planet.svg';
 import sun from './sun.svg';
+import team from './team.svg';
 
 const icons = {
   'close': close,
+  'code': code,
   'description': description,
   'dropdown': dropdown,
   'flag-gb': flagGb,
@@ -25,6 +28,7 @@ const icons = {
   'moon': moon,
   'planet': planet,
   'sun': sun,
+  'team': team,
 };
 
 export default icons;
