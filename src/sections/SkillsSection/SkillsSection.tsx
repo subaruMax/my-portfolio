@@ -11,7 +11,6 @@ import {
   TECHNOLOGIES_LIBRARIES
 } from '@app/constants/skills';
 
-import useNavContext from '@app/context/navContext';
 import { NAVIGATION } from '@app/constants/navigation';
 import { useChangeSection } from '@app/hooks';
 

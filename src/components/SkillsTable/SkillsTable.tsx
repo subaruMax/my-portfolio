@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 
 import { SkillItem, SkillItemProps } from './SkillItem';
 
 import s from './SkillsTable.module.scss';
+import { Typewriter } from '../ui-kit';
 
 type SkillsTableProps = {
   title: string;
@@ -19,7 +20,7 @@ const tableAppear = {
     transition: {
       type: 'tween',
       delayChildren: 0.4,
-      staggerChildren: 0.2
+      staggerChildren: 0.05
     }
   },
   hidden: { opacity: 0, y: 300, transition: { type: 'tween' } }
@@ -33,13 +34,15 @@ const item = {
   }
 };
 
-const viewport = { amount: 0.15, once: true };
+const viewport = { amount: 0.1, once: true };
 
 export const SkillsTable: React.FC<SkillsTableProps> = ({
   title,
   items,
   className
 }) => {
+  const [start, setStart] = useState(false);
+
   return (
     <motion.div
       className={cn(s.root, className)}
@@ -47,8 +50,10 @@ export const SkillsTable: React.FC<SkillsTableProps> = ({
       whileInView={'visible'}
       initial="hidden"
       viewport={viewport}
+      onViewportEnter={() => setStart(true)}
     >
-      <h5 className={s.title}>{title}:</h5>
+      {/* <h5 className={s.title}>{title}:</h5> */}
+      <Typewriter text={title} start={start} />
       <div className={s.table}>
         {items.map(el => (
           <motion.div key={el.name} variants={item}>
