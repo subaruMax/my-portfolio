@@ -13,10 +13,17 @@
   border-top: 2px solid var(--border-color);
 }
 
-
 .title {
   @include heading1;
   text-transform: uppercase;
   text-align: center;
   color: var(--text-color);
+  position: relative;
+}
+
+.video {
+  height: 100%;
+  width: 177vh;
+  min-width: 100%;
+  min-height: 56vw;
 }

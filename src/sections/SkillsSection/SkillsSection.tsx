@@ -15,6 +15,7 @@ import { NAVIGATION } from '@app/constants/navigation';
 import { useChangeSection } from '@app/hooks';
 
 import s from './SkillsSection.module.scss';
+import { VideoBackground } from '@app/components/VideoBackground';
 
 export const SkillsSection = () => {
   const ref = useRef(null);
@@ -46,6 +47,12 @@ export const SkillsSection = () => {
 
   return (
     <section className={s.root} ref={ref} id={NAVIGATION[1].id}>
+      <VideoBackground
+        src="/media/video/skills.mp4"
+        transformOffset={[0.6, 1]}
+        videoClassName={s.video}
+        blur={3}
+      />
       <motion.h1
         className={s.title}
         style={{ x: titleX, opacity: titleOpacity }}

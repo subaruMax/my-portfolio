@@ -8,6 +8,7 @@ import { NAVIGATION } from '@app/constants/navigation';
 import { useChangeSection } from '@app/hooks';
 
 import s from './ContactsSection.module.scss';
+import { VideoBackground } from '@app/components/VideoBackground';
 
 export const ContactsSection = () => {
   const t = useTranslations('Contacts');
@@ -23,7 +24,13 @@ export const ContactsSection = () => {
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   return (
-    <section className={s.root} ref={ref} id={NAVIGATION[2].id}>
+    <section className={s.root} ref={ref} id={NAVIGATION[3].id}>
+      <VideoBackground
+        src="/media/video/contacts.mp4"
+        videoClassName={s.video}
+        opacity={0.6}
+        ref={ref}
+      />
       <motion.h3
         className={s.title}
         style={{ x: titleX, opacity: titleOpacity }}
