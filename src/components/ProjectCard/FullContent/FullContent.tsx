@@ -3,38 +3,39 @@ import * as React from 'react';
 import { Icon } from '@ui-kit';
 
 import s from './FullContent.module.scss';
+import { useTranslations } from 'next-intl';
 
 type FullContentProps = {
   href: string | null;
   description: string;
   jobDone: string;
   technologies: string[];
-  teamSize: number;
 };
 
 export const FullContent: React.FC<FullContentProps> = React.memo(
-  ({ description, teamSize, jobDone, technologies, href }) => {
+  ({ description, jobDone, technologies, href }) => {
+    const t = useTranslations('Portfolio');
+
     const SECTIONS = [
       {
-        title: 'Project Url:',
+        title: t('project-url'),
         icon: 'planet',
         content: href ? (
           <a className={s.url} href={href} target="_blank" rel="no referrer">
-            {href}
+            {href.replace(/(https:\/\/)(www.)?/, '')}
           </a>
         ) : (
-          'Not Available'
+          t('not-available')
         )
       },
       {
-        title: 'Project Description:',
+        title: t('project-description'),
         icon: 'description',
         content: description
       },
-      { title: 'Team Size:', icon: 'team', content: teamSize },
-      { title: 'Job Description:', icon: 'code', content: jobDone },
+      { title: t('job-description'), icon: 'code', content: jobDone },
       {
-        title: 'Core Technologies:',
+        title: t('core-technologies'),
         icon: 'gear',
         content: (
           <div className={s.chips}>

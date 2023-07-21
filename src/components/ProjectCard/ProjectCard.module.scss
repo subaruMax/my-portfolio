@@ -5,7 +5,7 @@
 .root {
   cursor: pointer;
   width: 300px;
-  height: 235px;
+  height: 210px;
 }
 
 .card {
@@ -62,26 +62,29 @@
 .title {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
   padding: 10px 16px;
-  transform: translateZ(70px) translateY(18px) scale(0.85);
-
+  transform: translateZ(70px) translateY(15px) scale(0.85);
   justify-content: space-between;
 }
 
-.projectTitle{
+.projectTitle {
   text-shadow: 0 0 1px var(--special-bg-color);
 }
 
-.companyEmployed{
-  color: var(--border-color);
-  opacity: 0;
+.companyEmployed {
+  @include paragraph1;
+  color: var(--special-text-color);
+  display: none;
 }
 
 .image {
-  width: 100%;
-  height: 84%;
+  max-width: 100%;
+  height: 83%;
   border-top: 1px solid var(--border-color);
   position: relative;
+  object-fit: cover;
 }
 
 .frontScreen,
@@ -169,11 +172,12 @@
   }
 
   .companyEmployed {
-    opacity: 1;
+    display: block;
   }
 
   .image {
     height: auto;
+    object-fit: contain;
     position: relative;
   }
 

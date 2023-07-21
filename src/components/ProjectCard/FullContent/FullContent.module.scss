@@ -50,34 +50,10 @@
   gap: 8px;
 
   > div {
-    border: 1px solid var(--special-bg-color);
+    border: 1px solid var(--border-color);
     background-color: var(--bg-color);
     padding: 0px 12px;
     border-radius: 4px;
     position: relative;
-
-    &::before {
-      content: '';
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 1px;
-      width: calc((100% + 20px));
-      border-top: 20px solid var(--special-bg-color);
-      position: absolute;
-      z-index: -1;
-    }
-
-    &:first-child::before {
-      left: 0;
-      transform: translate(10px, -50%);
-      width: 100%;
-    }
-
-    &:last-child::before {
-      left: 0;
-      transform: translate(-10px, -50%);
-      width: 100%;
-    }
   }
 }

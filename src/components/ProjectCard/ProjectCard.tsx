@@ -7,6 +7,7 @@ import { FullContent } from './FullContent/FullContent';
 import { useLockBodyScroll } from '@app/hooks';
 
 import s from './ProjectCard.module.scss';
+import { useTranslations } from 'next-intl';
 
 type ProjectCardProps = {
   title: string;
@@ -16,7 +17,6 @@ type ProjectCardProps = {
   description: string;
   technologies: string[];
   jobDone: string;
-  teamSize: number;
   company: string;
   isOpened: boolean;
   className?: string;
@@ -35,7 +35,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   description,
   jobDone,
-  teamSize,
   technologies,
   isOpened,
   className,
@@ -43,6 +42,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   onImageLoad
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const t = useTranslations('Portfolio');
 
   useLockBodyScroll(isOpened);
 
@@ -64,7 +64,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className={s.glass} />
           <div className={s.title}>
             <div className={s.projectTitle}>{title}</div>
-            <div className={s.companyEmployed}>at - {company}</div>
+            <div className={s.companyEmployed}>
+              {t('employed-at')} {company}
+            </div>
           </div>
           <Image
             src={image}
@@ -81,17 +83,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {isOpened && (
             <FullContent
               href={href}
-              description={description}
+              description={t(description)}
               technologies={technologies}
-              jobDone={jobDone}
-              teamSize={teamSize}
+              jobDone={t(jobDone)}
             />
           )}
         </div>
 
         <div className={s.back}>
           <div className={s.glass} />
-          <div className={s.backContent}>{shortDescription}</div>
+          <div className={s.backContent}>{t(shortDescription)}</div>
           <div className={s.backScreen} />
         </div>
       </motion.div>
