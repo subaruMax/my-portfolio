@@ -22,7 +22,70 @@
     "technologies": "Technologies & Libraries"
   },
   "Portfolio": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "project-url": "Project Url:",
+    "project-description": "Project Description:",
+    "job-description": "Job Description:",
+    "core-technologies": "Core Technologies:",
+    "employed-at": "at ",
+    "not-available": "Not Available",
+    "projects": {
+      "magic-powered": {
+        "description-short": "Community of open minded builders in pursuit of a decentralised, better world",
+        "description-long": "The website for Magic Powered, a company that specializes in the design and development of blockchain web apps.",
+        "job-done": "Implementing new features, optimizing the performance, large UI update, bugs fixing, backend development with Strapi."
+      },
+      "sputnik-dao": {
+        "description-short": "SputnikDAO is a hub of DAOs empowering communities of the NEAR ecosystem",
+        "description-long": "SputnikDAO is a hub of DAOs empowering communities of the NEAR ecosystem. Receive rewards for individual contributions by submitting proposals to existing DAOs. Create a guild for your own meaningful project to find allies and monthly funding.",
+        "job-done": "Converting project from React to Next.js, minor UI updates, bugs fixing."
+      },
+      "burnt-finance": {
+        "description-short": "Burnt is a WEB3 Foundry",
+        "description-long": "Burnt is a WEB3 foundry, our team is a collective of relentless engineers, designers, strategists and creatives seeking to advance models of ownership, for the individual and the collective, by any means necessary. We integrate and partner with likeminded entities to build infrastructure, products and experiences that close the gap between creative freedom and financial autonomy.",
+        "job-done": "Developing of Frontend and Backend parts from scratch. REST API, Email, Google Analytics integrations."
+      },
+      "defi-safety": {
+        "description-short": "DeFiSafety is an independent quality and ratings organization that evaluates Decentralized Finance products",
+        "description-long": "DeFiSafety is an independent quality and ratings organization that evaluates Decentralized Finance products to produce an overarching security score based on our transparent quality standard which features transparency and adherence to best practices. DeFiSafety’s Protocol Review and Chain Review standards follow a clear, standardized and established process. It allowing users to directly compare scores across different projects. Results of our assessments can be easily replicated by following the PQR documentation posted on our website Protocol score documentation clearly indicates the criteria behind the ratings and how we arrive at our conclusions. DeFiSafety’s Protocol scores allow users to make informed decisions about the DeFi protocols they invest in, and provide developers with clear, achievable goals towards improving code, documentation and transparency. DeFiSafety does not perform code audits. Instead, we review the quality of process and documentation behind the code, of which audits are only a part.",
+        "job-done": "Implementing new features, UI updates, bugs fixing, backend development with Strapi, REST API integration"
+      },
+      "airloom": {
+        "description-short": "Open Sourced protocol for crypto projects",
+        "description-long": "Open Sourced protocol for crypto projects to reward their users for onboarding, completing quests and distribute rewards in a decentralized way.",
+        "job-done": "Implementing new features, UI updates, bugs fixing"
+      },
+      "the-auction": {
+        "description-short": "P2P NFT Marketplace",
+        "description-long": "The Auction is a secondary NFT marketplace where true value of digital assets is discovered through auctions. We provide tools to mint, trade, and discover valuable NFTs.",
+        "job-done": "Developing app from scratch, going trough alfa, beta testnets to production. Implementing new features, updates, bugs fixing. Integration with Near and REST API."
+      },
+      "staking-platform": {
+        "description-short": "Decentralized crowdfunding protocol",
+        "description-long": "The Staking Platform is a decentralized crowdfunding protocol that will make it possible for people to launch and fund projects using proof-of-stake blockchains. We believe decentralization will result in innovation like we’ve never seen before and that it’s a key to the future of crowdfunding.",
+        "job-done": "Developing app from scratch, going trough alfa, beta testnets to production. Implementing new features, updates, bugs fixing. Integration with Near and REST API."
+      },
+      "societal": {
+        "description-short": "An application-specific blockchain, designed for the creation and management of decentralized communities",
+        "description-long": "Societal is the premier, all-in-one community creation and management platform. Societal allows all types of groups or communities to build their own online, transparent organization. Societal bundles all of the tools required to create and manage your community in one place. Creators will be empowered to construct a community with a governance tokens: fungible, non-fungible, or a combination of both. Societal also combines all the tools required to manage your community, from treasury management, specialized governance, task boards, legal structuring, and accounting. This removes the need to move across different siloed platforms to manage the operations of your community. So whether a creator is looking to build a DAO for their organization, raise and deploy investment capital, or to decentralize governance of an NFT project, Societal has all the tools necessary for a seamless end-to-end experience.",
+        "job-done": "Complete update of Societal website."
+      },
+      "dadagan": {
+        "description-short": "2019 Historic NFT collection by Dadagan",
+        "description-long": "2019 Historic NFT collection by Dadagan. Website for minting NFTs on Ethereum Blockchain, collection of 1000 portraits generated by AI",
+        "job-done": "Developing of landing page, and minting functionality from scratch. Integration with Ethereum blockchain, smart contract, REST and Twitter API."
+      },
+      "hnft": {
+        "description-short": "HNFTFest Memento: The past of the future",
+        "description-long": "HNFTFest Memento: The past of the future. Website for minting NFTs on Ethereum Blockchain. The HNFTFest 2022 Memento is an immersive virtual recreation of the retrospective curated by Eleonora Brizi, featuring significant early artworks from 2011-2019. It was created to commemorate the first HNFTFest, which took place in Barcelona, Spain in October 2022.",
+        "job-done": "Developing of landing page and minting functionality from scratch. Integration with Ethereum blockchain, smart contract, REST and Twitter API."
+      },
+      "dada": {
+        "description-short": "The home for all Dada NFTS",
+        "description-long": "The home for all Dada NFTS. Dada NFTs marketplace.",
+        "job-done": "Updating, bugs fixing, rewriting all backend integrations, refactoring existing app. Integration with Ethereum blockchain and three different smart contracts."
+      }
+    }
   },
   "Contacts": {
     "title": "Contacts"

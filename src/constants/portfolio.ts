@@ -1,28 +1,91 @@
 export const PROJECTS = [
   {
+    title: 'Dada',
+    company: 'Magic Powered',
+    image: '/media/projects/dada.png',
+    shortDescription: 'projects.dada.description-short',
+    description: 'projects.dada.description-long',
+    jobDone: 'projects.dada.job-done',
+    href: 'https://nft.dada.art',
+    technologies: ['Next.js', 'Ethereum Blockchain']
+  },
+  {
+    title: 'HNFT',
+    company: 'Magic Powered',
+    image: '/media/projects/hnft.png',
+    shortDescription: 'projects.hnft.description-short',
+    description: 'projects.hnft.description-long',
+    jobDone: 'projects.hnft.job-done',
+    href: 'https://memento.hnft.community',
+    technologies: ['Next.js', 'Ethereum Blockchain']
+  },
+  {
+    title: 'Dadagan',
+    company: 'Magic Powered',
+    image: '/media/projects/dadagan.png',
+    shortDescription: 'projects.dadagan.description-short',
+    description: 'projects.dadagan.description-long',
+    jobDone: 'projects.dadagan.job-done',
+    href: 'https://nft.dada.art/dadagan',
+    technologies: ['Next.js', 'Ethereum Blockchain']
+  },
+  {
+    title: 'Societal',
+    company: 'Magic Powered',
+    image: '/media/projects/societal.png',
+    shortDescription: 'projects.societal.description-short',
+    description: 'projects.societal.description-long',
+    jobDone: 'projects.societal.job-done',
+    href: 'https://www.sctl.xyz',
+    technologies: ['Next.js']
+  },
+  {
+    title: 'Staking Platform',
+    company: 'Magic Powered',
+    image: '/media/projects/staking-platform.png',
+    shortDescription: 'projects.staking-platform.description-short',
+    description: 'projects.staking-platform.description-long',
+    jobDone: 'projects.staking-platform.job-done',
+    href: 'https://staking-platform.io',
+    technologies: ['Next.js', 'Near Blockchain']
+  },
+  {
+    title: 'The Auction',
+    company: 'Magic Powered',
+    image: '/media/projects/the-auction.png',
+    shortDescription: 'projects.the-auction.description-short',
+    description: 'projects.the-auction.description-long',
+    jobDone: 'projects.the-auction.job-done',
+    href: null,
+    technologies: ['Next.js', 'Near Blockchain']
+  },
+  {
+    title: 'Airloom',
+    company: 'Magic Powered',
+    image: '/media/projects/airloom.png',
+    shortDescription: 'projects.airloom.description-short',
+    description: 'projects.airloom.description-long',
+    jobDone: 'projects.airloom.job-done',
+    href: null,
+    technologies: ['Next.js']
+  },
+  {
     title: 'DeFi Safety',
     company: 'Magic Powered',
     image: '/media/projects/defi-safety.png',
-    shortDescription:
-      'DeFiSafety is an independent quality and ratings organization that evaluates Decentralized Finance products.',
-    description:
-      'DeFiSafety is an independent quality and ratings organization that evaluates Decentralized Finance products to produce an overarching security score based on our transparent quality standard which features transparency and adherence to best practices. DeFiSafety’s Protocol Review and Chain Review standards follow a clear, standardized and established process. It allowing users to directly compare scores across different projects. Results of our assessments can be easily replicated by following the PQR documentation posted on our website Protocol score documentation clearly indicates the criteria behind the ratings and how we arrive at our conclusions. DeFiSafety’s Protocol scores allow users to make informed decisions about the DeFi protocols they invest in, and provide developers with clear, achievable goals towards improving code, documentation and transparency. DeFiSafety does not perform code audits. Instead, we review the quality of process and documentation behind the code, of which audits are only a part.',
-    teamSize: 2,
-    jobDone:
-      'Implementing new features, UI updates, bugs fixing, backend development with Strapi, API integration',
-    href: 'https://www.defisafety.com/',
+    shortDescription: 'projects.defi-safety.description-short',
+    description: 'projects.defi-safety.description-long',
+    jobDone: 'projects.defi-safety.job-done',
+    href: 'https://www.defisafety.com',
     technologies: ['Next.js', 'Strapi']
   },
   {
     title: 'Burnt Finance',
     company: 'Magic Powered',
     image: '/media/projects/burnt.png',
-    shortDescription: 'Burnt is a WEB3 Foundry.',
-    description:
-      'Burnt is a WEB3 foundry, our team is a collective of relentless engineers, designers, strategists and creatives seeking to advance models of ownership, for the individual and the collective, by any means necessary. We integrate and partner with likeminded entities to build infrastructure, products and experiences that close the gap between creative freedom and financial autonomy.',
-    jobDone:
-      'Developing of Frontend and Backend parts from scratch. API, Email, Google Analytics integrations.',
-    teamSize: 2,
+    shortDescription: 'projects.burnt-finance.description-short',
+    description: 'projects.burnt-finance.description-long',
+    jobDone: 'projects.burnt-finance.job-done',
     href: null,
     technologies: ['Next.js', 'Strapi']
   },
@@ -30,13 +93,9 @@ export const PROJECTS = [
     title: 'SputnikDAO',
     company: 'Magic Powered',
     image: '/media/projects/sputnik-dao.png',
-    shortDescription:
-      'SputnikDAO is a hub of DAOs empowering communities of the NEAR ecosystem.',
-    description:
-      'SputnikDAO is a hub of DAOs empowering communities of the NEAR ecosystem. Receive rewards for individual contributions by submitting proposals to existing DAOs. Create a guild for your own meaningful project to find allies and monthly funding.',
-    jobDone:
-      'Converting project from React to Next.js, minor UI updates, bugs fixing.',
-    teamSize: 1,
+    shortDescription: 'projects.sputnik-dao.description-short',
+    description: 'projects.sputnik-dao.description-long',
+    jobDone: 'projects.sputnik-dao.job-done',
     href: 'https://sputnik.fund',
     technologies: ['React', 'Next.js', 'NEAR Blockchain']
   },
@@ -44,14 +103,10 @@ export const PROJECTS = [
     title: 'Magic Powered',
     company: 'Magic Powered',
     image: '/media/projects/magic-powered.png',
-    shortDescription:
-      'Community of open minded builders in pursuit of a decentralised, better world.',
-    description:
-      'The website for Magic Powered, a company that specializes in the design and development of blockchain web apps.',
-    jobDone:
-      'Implementing new features, optimizing the performance, large UI update, bugs fixing, backend development with Strapi. API, Google Analytics, Calendly integrations.',
-    teamSize: 1,
-    href: 'https://magicpowered.io/',
+    shortDescription: 'projects.magic-powered.description-short',
+    description: 'projects.magic-powered.description-long',
+    jobDone: 'projects.magic-powered.job-done',
+    href: 'https://magicpowered.io',
     technologies: ['Next.js', 'Strapi']
   }
 ];
