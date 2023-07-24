@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import s from './Typewriter.module.scss';
+import { useInView } from 'framer-motion';
 
 type TypewriterProps = {
   text: string;
@@ -14,8 +15,16 @@ type TypewriterProps = {
 export const Typewriter: React.FC<TypewriterProps> = React.memo(
   ({ text, start = true, interval = 100, className, onComplete }) => {
     const ref = useRef<HTMLDivElement>(null);
+    const [wasInView, setWasInView] = useState(false);
+    const isInView = useInView(ref);
     const chars = text.split('');
     const [isCompleted, setIsCompleted] = useState(false);
+
+    useEffect(() => {
+      if (isInView) {
+        setWasInView(true);
+      }
+    }, [isInView]);
 
     useEffect(() => {
       let currentI = 0;
@@ -26,12 +35,13 @@ export const Typewriter: React.FC<TypewriterProps> = React.memo(
           return;
         }
 
-        if (result?.length !== text.length) {
-          ref.current.textContent = ref.current?.textContent + chars[currentI];
-          currentI = currentI + 1;
-        } else {
+        if (result?.length === text.length || (wasInView && !isInView)) {
+          ref.current.textContent = text;
           setIsCompleted(true);
           onComplete?.();
+        } else {
+          ref.current.textContent = ref.current?.textContent + chars[currentI];
+          currentI = currentI + 1;
         }
       };
 
