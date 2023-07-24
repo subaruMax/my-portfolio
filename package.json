@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently -k false \"npm:generate-icons\" \"next dev\" \"npm:open-browser\"",
+    "dev": "npm run generate-icons && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -35,7 +35,6 @@
     "@svgr/webpack": "^8.0.1",
     "@types/lodash": "^4.14.195",
     "@types/negotiator": "^0.6.1",
-    "concurrently": "^8.2.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8",

@@ -10,7 +10,6 @@
 }
 
 .bg {
-  animation: animate 3s linear alternate-reverse infinite;
   background: linear-gradient(
     190deg,
     var(--special-color) 0%,
@@ -28,6 +27,10 @@
 
   @include media.tablet-landscape {
     mask-size: 100vw;
+  }
+
+  @include media.desktop {
+    animation: animate 3s linear alternate-reverse infinite;
   }
 }
 
