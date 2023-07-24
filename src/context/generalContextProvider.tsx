@@ -4,6 +4,7 @@ import {
   ThemeContextProviderProps
 } from './themeContext';
 import { NavContextProvider } from './navContext';
+import { LoadingContextProvider } from './loadingContext';
 
 type GeneralContextProviderProps = {
   children: ReactNode;
@@ -16,7 +17,9 @@ export const GeneralContextProvider: React.FC<GeneralContextProviderProps> = ({
 }) => {
   return (
     <ThemeContextProvider cookieTheme={cookieTheme}>
-      <NavContextProvider>{children}</NavContextProvider>
+      <NavContextProvider>
+        <LoadingContextProvider>{children}</LoadingContextProvider>
+      </NavContextProvider>
     </ThemeContextProvider>
   );
 };

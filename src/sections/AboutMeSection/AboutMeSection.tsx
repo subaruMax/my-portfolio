@@ -11,11 +11,13 @@ import { NAVIGATION } from '@app/constants/navigation';
 import { useChangeSection } from '@app/hooks';
 
 import s from './AboutMeSection.module.scss';
+import { useLoadingContext } from '@app/context';
 
 export const AboutMeSection = () => {
   const { theme } = useThemeContext();
   const t = useTranslations('AboutMe');
   const ref = useRef(null);
+  const { appLoaded } = useLoadingContext();
 
   useChangeSection(ref, NAVIGATION[0].id);
 
@@ -59,6 +61,7 @@ export const AboutMeSection = () => {
           interval={60}
           className={s.title}
           text={t('title')}
+          start={appLoaded}
           onComplete={() => handleStartTyping('p1')}
         />
         <div className={s.description}>

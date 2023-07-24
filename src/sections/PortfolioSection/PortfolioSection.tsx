@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -21,7 +21,7 @@ export const PortfolioSection = () => {
   const titleX = useTransform(scrollYProgress, [0, 0.4], ['30%', '0%']);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
-  useChangeSection(ref, NAVIGATION[2].id);
+  useChangeSection(ref, NAVIGATION[2].id, 0.3);
 
   return (
     <section className={s.root} ref={ref} id={NAVIGATION[2].id}>
