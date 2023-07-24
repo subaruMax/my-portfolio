@@ -78,14 +78,19 @@ export const LoadingContextProvider: FC<LoadingContextProviderProps> = ({
         alt="preload"
         style={{ display: 'none' }}
         onLoadingComplete={() => onImageLoaded(el)}
+        unoptimized
       />
     ));
   };
 
   useEffect(() => {
+    let timer: NodeJS.Timer;
+
     if (imagesLoaded.length === imagesToLoad.length) {
-      setAppLoaded(true);
+      timer = setTimeout(() => setAppLoaded(true), 600);
     }
+
+    return () => clearTimeout(timer);
   }, [imagesLoaded, imagesToLoad]);
 
   return (
@@ -97,20 +102,8 @@ export const LoadingContextProvider: FC<LoadingContextProviderProps> = ({
         onVideoLoaded
       }}
     >
-      {!appLoaded && (
-        <>
-          {preloadImages()}
-          <LoadingScreen />
-        </>
-      )}
-      <div
-        style={{
-          transition: 'opacity 1s 0.3s ease',
-          opacity: appLoaded ? 1 : 0
-        }}
-      >
-        {children}
-      </div>
+      {!appLoaded && <>{preloadImages()}</>}
+      {children}
     </LoadingContext.Provider>
   );
 };

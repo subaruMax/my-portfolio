@@ -8,8 +8,12 @@
   position: fixed;
   z-index: 9999;
   background-color: var(--bg-color);
+  top: 0;
 }
 
 .loader {
   position: relative;
+  top: unset;
+  left: unset;
+  transform: unset;
 }
