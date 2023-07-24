@@ -1,4 +1,9 @@
 {
+  "LoadingScreen": {
+    "scripts": "Загрузка скриптов",
+    "assets": "Загрузка медиа",
+    "please-wait": "пожалуйста подождите..."
+  },
   "Header": {
     "about": "Обо мне",
     "skills": "Навыки",

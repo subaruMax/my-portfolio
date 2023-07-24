@@ -6,6 +6,7 @@ import { METADATA } from '@app/constants/ metadata';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Footer } from '@app/components/Footer';
+import { LoadingScreen } from '@app/components/LoadingScreen';
 
 type LocaleLayoutProps = {
   children: ReactNode;
@@ -45,6 +46,7 @@ const LocaleLayout = async ({
       <Header />
       {children}
       <Footer />
+      <LoadingScreen />
     </NextIntlClientProvider>
   );
 };

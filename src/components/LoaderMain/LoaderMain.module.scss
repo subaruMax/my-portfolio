@@ -10,6 +10,9 @@ $circles-amount: 9;
   max-height: calc($side * 2);
   perspective: 1000px;
   filter: blur(4px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .plane {

@@ -70,7 +70,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             src={image}
             width={1200}
             height={700}
-            quality={100}
+            unoptimized
             alt={title}
             className={s.image}
           />

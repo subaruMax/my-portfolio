@@ -1,4 +1,9 @@
 {
+  "LoadingScreen": {
+    "scripts": "Loading of scripts",
+    "assets": "Loading of assets",
+    "please-wait": "please wait..."
+  },
   "Header": {
     "about": "About Me",
     "skills": "Skills",
