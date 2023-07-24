@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 
-import { ProjectCard } from '@app/components/ProjectCard';
+import { ProjectCard } from '@app/components/ProjectsWithPagination/ProjectCard';
 import { PROJECTS } from '@app/constants/portfolio';
 
 import s from './ProjectsGrid.module.scss';
@@ -12,15 +12,13 @@ type ProjectsGridProps = {
   perPage: number;
   projects: typeof PROJECTS;
   onCardSelect: (cardId: string) => void;
-  onCardImageLoad: (cardId: string) => void;
 };
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
   selectedCardId,
   pageNumber,
   perPage,
-  onCardSelect,
-  onCardImageLoad
+  onCardSelect
 }) => {
   const offset = pageNumber * perPage;
 
@@ -38,7 +36,6 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
             <ProjectCard
               {...project}
               onClick={onCardSelect}
-              onImageLoad={onCardImageLoad}
               isOpened={selectedCardId === project.title}
             />
           </motion.div>

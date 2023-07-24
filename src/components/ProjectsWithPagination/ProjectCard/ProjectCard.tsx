@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { FullContent } from './FullContent/FullContent';
 import { useLockBodyScroll } from '@app/hooks';
 
 import s from './ProjectCard.module.scss';
-import { useTranslations } from 'next-intl';
 
 type ProjectCardProps = {
   title: string;
@@ -21,7 +21,6 @@ type ProjectCardProps = {
   isOpened: boolean;
   className?: string;
   onClick: (id: string) => void;
-  onImageLoad: (id: string) => void;
 };
 
 export const openSpring = { type: 'spring', stiffness: 200, damping: 30 };
@@ -38,8 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   isOpened,
   className,
-  onClick,
-  onImageLoad
+  onClick
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const t = useTranslations('Portfolio');
@@ -62,19 +60,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         <div className={s.front} ref={ref}>
           <div className={s.glass} />
-          <div className={s.title}>
+          <motion.div layout className={s.title}>
             <div className={s.projectTitle}>{title}</div>
             <div className={s.companyEmployed}>
               {t('employed-at')} {company}
             </div>
-          </div>
+          </motion.div>
           <Image
             src={image}
             width={1200}
             height={700}
             quality={100}
             alt={title}
-            onLoadingComplete={() => onImageLoad(title)}
             className={s.image}
           />
 
