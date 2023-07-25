@@ -10,6 +10,7 @@
     "lint-fix": "npm run lint --fix",
     "stylelint": "npx stylelint  --fix \"**/*.{css,scss,sass}\"",
     "generate-icons": "[ ! -f \"./scripts/generateIcons.js\" ] || node scripts/generateIcons.js",
+    "generate-preload-urls": "[ ! -f \"./scripts/generatePreloadUrls.js\" ] || node scripts/generatePreloadUrls.js",
     "open-browser": "opener http://localhost:3000"
   },
   "dependencies": {

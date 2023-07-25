@@ -3,21 +3,15 @@
 import React, {
   FC,
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useState
 } from 'react';
 import Image from 'next/image';
 
-import { LoaderMain } from '@app/components/LoaderMain';
-import { PROJECTS } from '@app/constants/portfolio';
-import {
-  FRAMEWORKS,
-  PROGRAMMING_LANGUAGES,
-  TECHNOLOGIES_LIBRARIES
-} from '@app/constants/skills';
-import { uniq } from 'lodash';
-import { LoadingScreen } from '@app/components/LoadingScreen';
+import PRELOAD_MEDIA from 'public/media/media-preload-urls.json';
+import { useMobileDetect } from '@app/hooks';
 
 interface LoadingContextProps {
   appLoaded: boolean;
@@ -39,59 +33,90 @@ interface LoadingContextProviderProps {
   children: React.ReactNode;
 }
 
-const OTHER_ASSETS = [
-  { image: '/media/globe-dark.svg' },
-  { image: '/media/globe-light.svg' },
-  { image: '/media/logo-dark.svg' },
-  { image: '/media/logo-light.svg' }
-];
-
 export const LoadingContextProvider: FC<LoadingContextProviderProps> = ({
   children
 }) => {
   const [appLoaded, setAppLoaded] = useState(defaultState.appLoaded);
   const [imagesLoaded, setImagesLoaded] = useState<string[]>([]);
   const [videosLoaded, setVideosLoaded] = useState<string[]>([]);
-  const imagesToLoad = [
-    ...PROGRAMMING_LANGUAGES,
-    ...FRAMEWORKS,
-    ...TECHNOLOGIES_LIBRARIES,
-    ...PROJECTS,
-    ...OTHER_ASSETS
-  ].map(el => el.image);
-  const percentLoaded = (imagesLoaded.length / imagesToLoad.length) * 100;
+  const imagesToLoad = PRELOAD_MEDIA.images;
+  const videosToLoad = PRELOAD_MEDIA.videos;
+
+  const { isMobile } = useMobileDetect();
+
+  const percentLoaded =
+    Math.round(
+      (imagesLoaded.length + videosLoaded.length) /
+        (imagesToLoad.length + videosToLoad.length)
+    ) * 100;
 
   const onImageLoaded = (url: string) => {
-    setImagesLoaded(prev => uniq([...prev, url]));
+    setImagesLoaded(prev => [...prev, url]);
   };
 
   const onVideoLoaded = (url: string) => {
     setVideosLoaded(prev => [...prev, url]);
   };
   const preloadImages = () => {
-    return imagesToLoad.map(el => (
+    return imagesToLoad.map((url: string) => (
       <Image
-        src={el}
+        src={url}
         priority
         layout="fill"
-        key={el}
+        key={url}
         alt="preload"
         style={{ display: 'none' }}
-        onLoadingComplete={() => onImageLoaded(el)}
+        onLoadingComplete={() => onImageLoaded(url)}
         unoptimized
       />
     ));
   };
 
+  const loadVideo = async (src: string) => {
+    const res = await fetch(src);
+    const blob = await res.blob();
+
+    return URL.createObjectURL(blob);
+  };
+
+  const videoPreload = useCallback(() => {
+    if (isMobile) {
+      setVideosLoaded(videosToLoad);
+
+      return;
+    }
+
+    videosToLoad.forEach(async (videoUrl: string) => {
+      const video = document.createElement('video');
+
+      video.src = await loadVideo(videoUrl);
+      setVideosLoaded(prev => [...prev, videoUrl]);
+    });
+  }, [isMobile, videosToLoad]);
+
+  useEffect(() => {
+    videoPreload();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     let timer: NodeJS.Timer;
 
-    if (imagesLoaded.length === imagesToLoad.length) {
+    if (
+      imagesLoaded.length === imagesToLoad.length &&
+      videosLoaded.length === videosToLoad.length
+    ) {
       timer = setTimeout(() => setAppLoaded(true), 600);
     }
 
     return () => clearTimeout(timer);
-  }, [imagesLoaded, imagesToLoad]);
+  }, [
+    imagesLoaded,
+    imagesToLoad,
+    videosLoaded,
+    videosLoaded.length,
+    videosToLoad.length
+  ]);
 
   return (
     <LoadingContext.Provider
