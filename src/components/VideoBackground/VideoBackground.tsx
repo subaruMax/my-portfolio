@@ -2,6 +2,8 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import React, { forwardRef, useEffect, useRef } from 'react';
 import cn from 'classnames';
 
+import { useIsMounted, useMobileDetect } from '@app/hooks';
+
 import s from './VideoBackground.module.scss';
 
 type VideoBackgroundProps = {
@@ -28,6 +30,7 @@ export const VideoBackground = forwardRef<Ref, VideoBackgroundProps>(
     ref
   ) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const isMounted = useIsMounted();
     const isInView = useInView(videoRef);
     const { scrollYProgress } = useScroll({
       target: ref as React.RefObject<HTMLElement>,
@@ -45,6 +48,16 @@ export const VideoBackground = forwardRef<Ref, VideoBackgroundProps>(
         videoRef.current?.pause();
       }
     }, [isInView]);
+
+    const { isMobile } = useMobileDetect();
+
+    if (isMobile) {
+      return null;
+    }
+
+    if (!isMounted()) {
+      return null;
+    }
 
     return (
       <div className={cn(s.root, className)}>

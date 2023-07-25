@@ -13,3 +13,7 @@ declare module 'public/icons' {
 
   export default icons;
 }
+declare module '*.json' {
+  const value: any;
+  export default value;
+}
