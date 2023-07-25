@@ -6,11 +6,14 @@
 import close from './close.svg';
 import code from './code.svg';
 import description from './description.svg';
+import djinni from './djinni.svg';
 import dropdown from './dropdown.svg';
+import email from './email.svg';
 import flagGb from './flag-gb.svg';
 import flagUa from './flag-ua.svg';
 import fullscreen from './fullscreen.svg';
 import gear from './gear.svg';
+import linkedin from './linkedin.svg';
 import moon from './moon.svg';
 import planet from './planet.svg';
 import sun from './sun.svg';
@@ -20,11 +23,14 @@ const icons = {
   'close': close,
   'code': code,
   'description': description,
+  'djinni': djinni,
   'dropdown': dropdown,
+  'email': email,
   'flag-gb': flagGb,
   'flag-ua': flagUa,
   'fullscreen': fullscreen,
   'gear': gear,
+  'linkedin': linkedin,
   'moon': moon,
   'planet': planet,
   'sun': sun,
