@@ -14,9 +14,10 @@ type TypewriterProps = {
 
 export const Typewriter: React.FC<TypewriterProps> = React.memo(
   ({ text, start = true, interval = 100, className, onComplete }) => {
-    const ref = useRef<HTMLDivElement>(null);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const viewRef = useRef<HTMLDivElement>(null);
     const [wasInView, setWasInView] = useState(false);
-    const isInView = useInView(ref);
+    const isInView = useInView(viewRef);
     const chars = text.split('');
     const [isCompleted, setIsCompleted] = useState(false);
 
@@ -29,25 +30,26 @@ export const Typewriter: React.FC<TypewriterProps> = React.memo(
     useEffect(() => {
       let currentI = 0;
       const type = () => {
-        const result = ref.current?.textContent;
+        const result = contentRef.current?.textContent;
 
-        if (!ref.current) {
+        if (!contentRef.current) {
           return;
         }
 
         if (result?.length === text.length || (wasInView && !isInView)) {
-          ref.current.textContent = text;
+          contentRef.current.textContent = text;
           setIsCompleted(true);
           onComplete?.();
         } else {
-          ref.current.textContent = ref.current?.textContent + chars[currentI];
+          contentRef.current.textContent =
+            contentRef.current?.textContent + chars[currentI];
           currentI = currentI + 1;
         }
       };
 
       let intervalId: NodeJS.Timer | undefined = undefined;
 
-      if (start) {
+      if (start && isInView && !isCompleted) {
         intervalId = setInterval(type, interval);
       }
 
@@ -57,14 +59,14 @@ export const Typewriter: React.FC<TypewriterProps> = React.memo(
 
       return () => clearInterval(intervalId);
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isCompleted, start]);
+    }, [isCompleted, start, isInView]);
 
     return (
-      <div className={cn(s.root, className)}>
+      <div className={cn(s.root, className)} ref={viewRef}>
         {start && !isCompleted && (
           <span className={cn(s.bracket, s.left)}></span>
         )}
-        <div ref={ref}>{ref.current?.textContent}</div>
+        <div ref={contentRef}>{contentRef.current?.textContent}</div>
         {start && !isCompleted && (
           <span className={cn(s.bracket, s.right)}></span>
         )}

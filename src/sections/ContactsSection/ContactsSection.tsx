@@ -6,16 +6,18 @@ import { useTranslations } from 'next-intl';
 
 import { NAVIGATION } from '@app/constants/navigation';
 import { useChangeSection } from '@app/hooks';
+import { VideoBackground } from '@app/components/VideoBackground';
+import { CONTACTS } from '@app/constants/contacts';
+import { ContactCard } from '@app/components/ContactCard';
 
 import s from './ContactsSection.module.scss';
-import { VideoBackground } from '@app/components/VideoBackground';
 
 export const ContactsSection = () => {
   const t = useTranslations('Contacts');
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-0.5', '0.5']
+    offset: ['-0.8', '0.1']
   });
 
   useChangeSection(ref, NAVIGATION[3].id);
@@ -37,6 +39,26 @@ export const ContactsSection = () => {
       >
         {t('title')}
       </motion.h3>
+
+      <motion.div
+        className={s.contacts}
+        whileInView="visible"
+        initial="hidden"
+        transition={{ staggerChildren: 0.3, delayChildren: 0.5 }}
+      >
+        {CONTACTS.map(contact => (
+          <motion.div
+            key={contact.title}
+            transition={{ type: 'tween' }}
+            variants={{
+              visible: { y: 0, opacity: 1, skewY: 0 },
+              hidden: { y: 100, opacity: 0, skewY: 30 }
+            }}
+          >
+            <ContactCard {...contact} />
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };
